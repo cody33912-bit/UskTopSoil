@@ -1,0 +1,2740 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Usk Top Soil — trusted topsoil and subsoil suppliers across Usk, Monmouthshire. Delivering bulk loads to Cardiff, Newport, Pontypool, and the Valleys. Fully insured, 5-star Google reviews. Get a free delivery quote today.">
+    <title>Usk Top Soil | Premium Soil Supply & Bulk Deliveries</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== RESET ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary: #eebd2b;
+            --bg-light: #f8f7f6;
+            --bg-dark: #221d10;
+            --font: 'Manrope', sans-serif;
+        }
+
+        /* ===== BASE ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            color: #1a1a1a;
+            background: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 5rem;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: var(--font);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== FOCUS VISIBLE ===== */
+        :focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* ===== SKIP LINK ===== */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            z-index: 999;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        /* ===== SR ONLY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ===== GLASS NAV ===== */
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            background: rgba(248, 247, 246, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(238, 189, 43, 0.1);
+        }
+
+        .nav-inner {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo-img {
+            height: 3.5rem;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .nav-phone .material-symbols-outlined {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 0.625rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            transition: all 0.2s;
+            box-shadow: 0 10px 15px -3px rgba(238, 189, 43, 0.2);
+            cursor: pointer;
+            min-height: 44px;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+        }
+
+        .nav-cta:active {
+            transform: scale(0.97);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            height: 100dvh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: -5rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent, var(--bg-light));
+            z-index: 1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1.5rem;
+            max-width: 56rem;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background: rgba(238, 189, 43, 0.2);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(238, 189, 43, 0.3);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .hero-desc {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: background 0.2s;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.97);
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--bg-dark);
+            color: white;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(238, 189, 43, 0.1);
+        }
+
+        .trust-bar-inner {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .trust-item .material-symbols-outlined {
+            color: var(--primary);
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 6rem 1.5rem;
+        }
+
+        .section-inner {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .section-heading {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: #4b5563;
+            max-width: 42rem;
+            line-height: 1.7;
+        }
+
+        .section-desc.center {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .services-header-right {
+            color: #4b5563;
+            max-width: 20rem;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            aspect-ratio: 4/5;
+            background: #f1f5f9;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s;
+            filter: grayscale(30%);
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        .service-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+        }
+
+        .service-card-overlay h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card-overlay p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .service-card-overlay a {
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.2s;
+            cursor: pointer;
+            min-height: 44px;
+        }
+
+        .service-card:hover .service-card-overlay a {
+            gap: 0.75rem;
+        }
+
+        /* ===== PROJECTS ===== */
+        .projects {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+
+
+        .project-img {
+            aspect-ratio: 1;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: #e2e8f0;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-meta {
+            margin-top: 1rem;
+        }
+
+        .project-location {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary);
+        }
+
+        .project-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        .project-offset {
+            transform: translateY(3rem);
+        }
+
+        /* ===== MID CTA ===== */
+        .mid-cta {
+            background: var(--primary);
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .mid-cta h2 {
+            color: var(--bg-dark);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .mid-cta p {
+            color: rgba(34, 29, 16, 0.8);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mid-cta-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-dark {
+            background: var(--bg-dark);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.2s;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .btn-dark:hover {
+            opacity: 0.9;
+        }
+
+        .btn-dark:active {
+            transform: scale(0.97);
+        }
+
+        .btn-outline-dark {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--bg-dark);
+            border: 2px solid rgba(34, 29, 16, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: background 0.2s;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .btn-outline-dark:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline-dark:active {
+            transform: scale(0.97);
+        }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-img-wrap {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .about-blur {
+            position: absolute;
+            top: -2.5rem;
+            left: -2.5rem;
+            width: 10rem;
+            height: 10rem;
+            background: rgba(238, 189, 43, 0.1);
+            border-radius: 50%;
+            filter: blur(48px);
+        }
+
+        .about-img {
+            position: relative;
+            z-index: 1;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .about-img img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p.body {
+            color: #4b5563;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p.body:last-of-type {
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-num {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.875rem;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            margin-top: 0.25rem;
+        }
+
+        .text-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: color 0.2s, transform 0.2s;
+            background: none;
+            border: none;
+            padding: 0;
+            color: inherit;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .text-link:hover {
+            color: var(--primary);
+        }
+
+        .text-link:active {
+            transform: scale(0.97);
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews {
+            background: rgba(238, 189, 43, 0.05);
+        }
+
+        .reviews-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .stars-row {
+            display: flex;
+            gap: 0.25rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* ===== AREAS ===== */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .area-chip {
+            background: rgba(238, 189, 43, 0.05);
+            border-radius: 0.75rem;
+            padding: 1rem 0.75rem;
+            text-align: center;
+            transition: background 0.2s;
+            cursor: pointer;
+            min-height: 44px;
+        }
+
+        .area-chip:hover {
+            background: rgba(238, 189, 43, 0.1);
+        }
+
+        .area-chip .material-symbols-outlined {
+            color: var(--primary);
+            font-size: 1.125rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .area-chip p {
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .areas-extended {
+            text-align: center;
+            margin-top: 2.5rem;
+            color: #4b5563;
+            font-size: 0.875rem;
+            font-style: italic;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            background: var(--bg-dark);
+            color: white;
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            color: #94a3b8;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--bg-dark);
+            color: #94a3b8;
+            padding: 4rem 1.5rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-inner {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo-img {
+            height: 3rem;
+            width: auto;
+            display: block;
+        }
+
+        .footer-desc {
+            max-width: 24rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            border: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .footer-social:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-color: var(--primary);
+        }
+
+        .footer-social:active {
+            transform: scale(0.93);
+        }
+
+        .footer-social .material-symbols-outlined {
+            font-size: 1rem;
+        }
+
+        .footer-col-title {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul a {
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--primary);
+        }
+
+        .footer-contact p {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact .phone {
+            font-weight: 700;
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #1e293b;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* ===== MATERIAL SYMBOLS FILL ===== */
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        /* ===== MOBILE MENU TOGGLE ===== */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            padding: 0.5rem;
+            color: var(--bg-dark);
+        }
+
+        .mobile-menu-toggle .material-symbols-outlined {
+            font-size: 1.75rem;
+        }
+
+        /* ===== MOBILE OVERLAY ===== */
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(34, 29, 16, 0.96);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-overlay.open {
+            display: flex;
+        }
+
+        .mobile-overlay-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            color: white;
+            padding: 0.5rem;
+        }
+
+        .mobile-overlay-close .material-symbols-outlined {
+            font-size: 1.75rem;
+        }
+
+        .mobile-overlay-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .mobile-overlay-links a {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .mobile-overlay-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-overlay-cta {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        .mobile-overlay-phone {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .mobile-overlay-phone .material-symbols-outlined {
+            color: var(--primary);
+        }
+
+        .mobile-overlay-socials {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .mobile-overlay-socials a {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .mobile-overlay-socials a:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-color: var(--primary);
+        }
+
+        /* ===== QUOTE FORM ===== */
+        .quote-section {
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .quote-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .quote-form-wrap {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .quote-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .quote-form .full-width {
+            grid-column: span 2;
+        }
+
+        .quote-form label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .quote-form input,
+        .quote-form select,
+        .quote-form textarea {
+            width: 100%;
+            min-height: 48px;
+            padding: 0.875rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(238, 189, 43, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: var(--font);
+            font-size: 0.9375rem;
+            transition: border-color 0.2s;
+        }
+
+        .quote-form input:focus,
+        .quote-form select:focus,
+        .quote-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .quote-form input::placeholder,
+        .quote-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .quote-form textarea {
+            min-height: 7rem;
+            resize: vertical;
+        }
+
+        .quote-form select option {
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .quote-submit {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+            margin-top: 0.5rem;
+            cursor: pointer;
+            min-height: 48px;
+        }
+
+        .quote-submit:hover {
+            transform: scale(1.05);
+        }
+
+        .quote-submit:active {
+            transform: scale(0.97);
+        }
+
+        .quote-sidebar {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .trust-card {
+            background: rgba(238, 189, 43, 0.08);
+            border: 1px solid rgba(238, 189, 43, 0.15);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        .trust-card h3 {
+            font-size: 1.125rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .trust-card-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid rgba(238, 189, 43, 0.08);
+        }
+
+        .trust-card-item:last-child {
+            border-bottom: none;
+        }
+
+        .trust-card-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.625rem;
+            background: rgba(238, 189, 43, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .trust-card-icon .material-symbols-outlined {
+            color: var(--primary);
+            font-size: 1.125rem;
+        }
+
+        .trust-card-label {
+            font-weight: 700;
+            font-size: 0.9375rem;
+        }
+
+        .trust-card-sub {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .quote-phone-callout {
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        .quote-phone-callout a {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== SERVICE DETAIL ===== */
+        .service-detail-section {
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .detail-card {
+            background: rgba(238, 189, 43, 0.05);
+            border: 1px solid rgba(238, 189, 43, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .detail-card:hover {
+            background: rgba(238, 189, 43, 0.1);
+        }
+
+        .detail-card .material-symbols-outlined {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-card p {
+            font-size: 0.8125rem;
+            color: #94a3b8;
+        }
+
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(238, 189, 43, 0.1);
+        }
+
+        .stats-bar-item {
+            text-align: center;
+        }
+
+        .stats-bar-num {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .stats-bar-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: #94a3b8;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== CASE STUDY ===== */
+        .case-study {
+            margin-top: 5rem;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .case-study-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .case-study-img {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .case-study-img img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .case-study-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .case-study-metrics {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .metric {
+            background: rgba(238, 189, 43, 0.08);
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.125rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: #4b5563;
+            margin-top: 0.125rem;
+        }
+
+        .case-study-desc {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-testimonial {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border-left: 3px solid var(--primary);
+        }
+
+        .case-study-testimonial p {
+            font-style: italic;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .case-study-testimonial cite {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        /* ===== BLOG ===== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-card-img {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: #e2e8f0;
+        }
+
+        .blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .blog-card:hover .blog-card-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: rgba(238, 189, 43, 0.1);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card-body h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .blog-card-body p {
+            color: #4b5563;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card-link {
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.2s;
+        }
+
+        .blog-card:hover .blog-card-link {
+            gap: 0.75rem;
+        }
+
+        .blog-newsletter {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2.5rem;
+            background: rgba(238, 189, 43, 0.05);
+            border-radius: 1rem;
+        }
+
+        .blog-newsletter h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-newsletter p {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 28rem;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-family: var(--font);
+            font-size: 0.875rem;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .newsletter-form button {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 0.875rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        /* ===== REDUCED MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-phone {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                flex-direction: column;
+            }
+
+            .review-card.wide {
+                grid-column: span 1;
+            }
+
+            .project-offset {
+                transform: none;
+            }
+
+            .trust-bar-inner {
+                gap: 1rem;
+            }
+
+            .mid-cta-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .quote-form {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-form .full-width {
+                grid-column: span 1;
+            }
+
+            .case-study-inner {
+                flex-direction: column;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .stats-bar {
+                gap: 1.5rem;
+            }
+
+            .service-detail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== 375px — SMALL PHONES ===== */
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-desc {
+                font-size: 0.9375rem;
+            }
+
+            .section-heading {
+                font-size: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .trust-bar-inner {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .trust-item span:not(.material-symbols-outlined) {
+                font-size: 0.75rem;
+            }
+
+            .mid-cta h2,
+            .final-cta h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .btn-dark,
+            .btn-outline-dark {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ===== 1024px — TABLETS / SMALL DESKTOPS ===== */
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.8125rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== 1440px+ — LARGE DESKTOPS ===== */
+        @media (min-width: 1440px) {
+            .section-inner {
+                max-width: 90rem;
+            }
+
+            .hero-content {
+                max-width: 64rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        /* ===== BLOG MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(34, 29, 16, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-container {
+            background: var(--bg-light);
+            width: 100%;
+            max-width: 50rem;
+            max-height: 90vh;
+            border-radius: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .modal-overlay.open .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-content-wrap {
+            overflow-y: auto;
+            max-height: 90vh;
+            padding: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content-wrap {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        .modal-blog-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 2rem;
+        }
+
+        .modal-blog-category {
+            display: inline-block;
+            background: rgba(238, 189, 43, 0.1);
+            color: #b38b1d;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .modal-blog-title {
+            font-size: 2.25rem;
+            line-height: 1.2;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .modal-blog-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        .modal-blog-body {
+            font-size: 1.125rem;
+            color: #444;
+        }
+
+        .modal-blog-body h4 {
+            font-size: 1.375rem;
+            color: var(--bg-dark);
+            margin: 2rem 0 1rem;
+        }
+
+        .modal-blog-body p {
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-blog-body ul {
+            margin-bottom: 1.5rem;
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+
+        .modal-blog-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-blog-img {
+            width: 100%;
+            height: 25rem;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .modal-blog-img {
+                height: 15rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="glass-nav" aria-label="Main navigation">
+            <div class="nav-inner">
+                <a href="#" class="nav-logo">
+                    <img src="uskTopSoil.png" alt="Usk Top Soil Logo" class="nav-logo-img">
+                </a>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <!-- <a href="#about">Our Story</a> -->
+
+                    <a href="#reviews">Reviews</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#areas">Areas</a>
+                </div>
+                <div class="nav-right">
+                    <a class="nav-phone" href="tel:+447743474400" aria-label="Call us at 07743 474400">
+                        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                        07743 474400
+                    </a>
+                    <button class="nav-cta"
+                        onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Free
+                        Quote</button>
+                    <button class="mobile-menu-toggle"
+                        onclick="document.getElementById('mobile-menu').classList.add('open')" aria-label="Open menu">
+                        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-overlay" role="dialog" aria-label="Mobile navigation">
+        <button class="mobile-overlay-close" onclick="document.getElementById('mobile-menu').classList.remove('open')"
+            aria-label="Close menu">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+        <nav class="mobile-overlay-links">
+            <a href="#services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
+            <a href="#projects" onclick="document.getElementById('mobile-menu').classList.remove('open')">Projects</a>
+            <!-- <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open')">Our Story</a> -->
+
+            <a href="#reviews" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
+            <a href="#blog" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
+            <a href="#areas" onclick="document.getElementById('mobile-menu').classList.remove('open')">Areas</a>
+        </nav>
+        <button class="mobile-overlay-cta"
+            onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get
+            a Free Quote</button>
+        <a class="mobile-overlay-phone" href="tel:+447743474400">
+            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+            07743 474400
+        </a>
+        <div class="mobile-overlay-socials">
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined"
+                    aria-hidden="true">share</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined"
+                    aria-hidden="true">photo_camera</span></a>
+            <a href="#" aria-label="Google Reviews"><span class="material-symbols-outlined fill-1"
+                    aria-hidden="true">star</span></a>
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-bg">
+                <div class="hero-overlay"></div>
+                <img alt="Beautifully landscaped Usk, Monmouthshire garden with stone pathway surrounded by lush green trees and ferns"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4piOpduA2gStj92ODkGopW0xt2qxLrYO_09iNga6Ku9v3KJsGeWLf1HcTnpcL7PHV7193fcDXEMLUHBj_7je4mxZTdVcC7rT1iTYSu4KFUHuCm6k5oeFbeOsNxSqP8fIyXxPdGEgh2BtT1s9_ttskc3i8j4p5eprGkOPuBeMjySrA9OyvvQOrwGclvIaSbTKjahEMuZrlAnUQfvA173JHjGJGrVfo1ttFWdXBjL1FFMswzgrQl1m8MNKb5mggbLkBKim9Guuq4AIH">
+            </div>
+            <div class="hero-content">
+                <span class="hero-badge">Usk & Monmouthshire's Trusted Topsoil Suppliers</span>
+                <h1 id="hero-heading">Premium Soil<br><span>Delivered to You</span></h1>
+                <p class="hero-desc">High-grade topsoil, sub-soil, and bulk supplies delivered for homes, landscaping
+                    projects, and trade across Newport, Monmouthshire, and the surrounding areas. Fast, reliable
+                    service with 20+ years of expertise.</p>
+
+                <div class="hero-btns">
+                    <button class="btn-primary"
+                        onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Delivery
+                        Quote <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+                    <button class="btn-secondary"
+                        onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Our
+                        Supplies</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="trust-bar-inner">
+                <div class="trust-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                    <span>Fully Insured</span>
+                </div>
+                <div class="trust-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+                    <span>NPTC Qualified</span>
+                </div>
+                <div class="trust-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
+                    <span>Free No-Obligation Quotes</span>
+                </div>
+                <div class="trust-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+                    <span>Same-Day Response</span>
+                </div>
+                <div class="trust-item" role="img" aria-label="Rated 5 stars on Google">
+                    <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                    <span>5.0 on Google</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prices Section -->
+        <section class="section" id="services" aria-labelledby="services-heading">
+            <div class="section-inner">
+                <div class="services-header">
+                    <div style="max-width:32rem;">
+                        <p class="section-label">Transparent Pricing</p>
+                        <h2 id="services-heading" class="section-heading">Our Prices</h2>
+                    </div>
+                    <p class="services-header-right">Simple, honest pricing for bulk soil and aggregates. Delivering quality
+                        topsoil at affordable prices to Usk and the surrounding areas.</p>
+
+                </div>
+                <div class="service-detail-grid" style="margin-top:2.5rem;">
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">landscape</span>
+                        <h4>Top Soil</h4>
+                        <p style="font-size:1.75rem;font-weight:800;color:var(--primary);margin:0.5rem 0;">£50<span
+                                style="font-size:1rem;font-weight:600;color:#4b5563"> / tonne</span></p>
+                        <p>Light, friable and easy to use. Expertly screened and ideal for borders, raised beds, and lawns.</p>
+
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+                        <h4>Sub Soil</h4>
+                        <p style="font-size:1.75rem;font-weight:800;color:var(--primary);margin:0.5rem 0;">£35<span
+                                style="font-size:1rem;font-weight:600;color:#4b5563"> / tonne</span></p>
+                        <p>Quality sub soil for foundations, drainage backfill, and bulk build-up work.</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
+                        <h4>Delivery</h4>
+                        <p style="font-size:1.75rem;font-weight:800;color:var(--primary);margin:0.5rem 0;">£20<span
+                                style="font-size:1rem;font-weight:600;color:#4b5563"> base rate</span></p>
+                        <p>Free delivery within 10 miles of Usk. Then just £2.50 per mile thereafter.</p>
+                    </div>
+                </div>
+                <div class="stats-bar" style="margin-top:3rem;">
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">10+</p>
+                        <p class="stats-bar-label">Years Supplying</p>
+                    </div>
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">40</p>
+                        <p class="stats-bar-label">5-Star Reviews</p>
+                    </div>
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">£50</p>
+                        <p class="stats-bar-label">Top Soil / Tonne</p>
+                    </div>
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">10mi</p>
+                        <p class="stats-bar-label">Free Delivery Radius</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="section service-detail-section" aria-labelledby="clients-heading">
+            <div class="section-inner">
+                <div style="text-align:center;">
+                    <p class="section-label" style="color:var(--primary);">Trusted By</p>
+                    <h2 id="clients-heading" class="section-heading" style="color:white; text-align:center;">Our Clients
+                    </h2>
+                    <p class="section-desc center" style="color:#94a3b8;">We supply premium topsoil to a range of
+                        trusted clients across Usk and Monmouthshire — from golf courses to large-scale construction projects.</p>
+
+                </div>
+                <div class="service-detail-grid" style="margin-top:2.5rem;">
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">golf_course</span>
+                        <h4>Usk Golf Course</h4>
+                        <p>Trusted supplier of premium topsoil for course maintenance, tee boxes, and fairway
+                            renovation.</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">water</span>
+                        <h4>River Bank Projects</h4>
+                        <p>Providing quality topsoil for river bank restoration and erosion management projects across
+                            the area.</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">park</span>
+                        <h4>Festival Park</h4>
+                        <p>Supplying bulk topsoil deliveries for large-scale landscaping and public green space
+                            projects across the region.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section class="section projects" id="projects" aria-labelledby="projects-heading">
+            <div class="section-inner" style="text-align:center; margin-bottom:4rem;">
+                <h2 id="projects-heading" class="section-heading" style="text-align:center;">Supplies &amp; Deliveries</h2>
+                <p class="section-desc center">Recent deliveries and supply partnerships across Usk, Monmouthshire. 
+                    Whether it's a few tonnes for a garden or bulk loads for a major site, we deliver quality every time.</p>
+            </div>
+
+            <div class="section-inner">
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img alt="The Glass House Retreat — complete modern backyard transformation in Penarth"
+                                loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nzaRBPnxWrqQUDLgG5VlS4hB2WVhNpijn154-ZLH6yRlga0dmXMugXhjRNppFSWoKebHAHr5Kr-q2F87ZNrsgCeZRuHWRu-4YNHUaZ5GtNzQUe6xTpnWvEM1I2NS5JHTBbrcLxhkJUyE0OS8NN32KWDBwf7c_4wHMAucUzd1OyLhuK07sW6YBymHiwhI-Bx1u128Y3RcOelIkcvR5xmhg5ySDEMnyZA6xM6fn5wtlub5SY_PQgAmDv2NLrdRkpmJHh5zSF7J39cL">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-location">Penarth</span>
+                            <h3 class="project-title">The Glass House Retreat</h3>
+                        </div>
+                    </div>
+                    <div class="project-item project-offset">
+                        <div class="project-img">
+                            <img alt="Cobblestone Courtyard — elegant natural stone patio in Abergavenny" loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7E-FVsjw3CkQA6qkH0DipeSqiGcE9_pa92hXicuz3X5LWiSKB1z4INOUtC03ShatLkG0etAE2MUBnDBXuH8HIrHp2fCcpDhk8Ow7Zc582SchEtY5WdFPygkGvROohmoHvJ8GY3hI5_ToTjYawcbcleUKlEcym493B23PiyqgSTYWRnAtSPa5-SfYcJIGxQDmcnDUVUyPfDtRPtZwJ--WlWQb9mXdnGCEdjCJhaTQA8xMsqItj3HnJJsIa8gc2AQOhJNmlNchQwnCD">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-location">Abergavenny</span>
+                            <h3 class="project-title">Cobblestone Courtyard</h3>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img alt="The Quiet Sanctuary — zen garden with Japanese-inspired design in Monmouth"
+                                loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsxX2uRhbXT7HbjK2-Yksa2zL5t_cK3iuqbIDMNhgoBH0GCfUTFBPt3KAiSbLCL_Kcm7n7ULA30CNyACVRzjxpCLgXTfpAkkKQbW1vUKNDQPPDAklmB4Kf87mgtcb9_5U670TjWKK1sc_e51tjOnEkytQQgU3IMna3Z23hChbaeeSX4rJ2tgGUtOZ-HdbVYjeQFTMSKgY1dLeDhn2nxCh_lSNAcsA9vYloJJSCFAHQDe1POLdKLYz6xLpso_6RmTjVqOoivJ3MKr16">
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-location">Monmouth</span>
+                            <h3 class="project-title">The Quiet Sanctuary</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Case Study -->
+            <div class="section-inner">
+                <div class="case-study">
+                    <p class="section-label">Featured Project</p>
+                    <h3 class="section-heading" style="font-size:clamp(1.25rem,3vw,1.75rem);">The Glass House Retreat,
+                        Penarth</h3>
+                    <div class="case-study-inner">
+                        <div class="case-study-img">
+                            <img alt="Completed Glass House Retreat garden transformation showing modern patio and lush planting"
+                                loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nzaRBPnxWrqQUDLgG5VlS4hB2WVhNpijn154-ZLH6yRlga0dmXMugXhjRNppFSWoKebHAHr5Kr-q2F87ZNrsgCeZRuHWRu-4YNHUaZ5GtNzQUe6xTpnWvEM1I2NS5JHTBbrcLxhkJUyE0OS8NN32KWDBwf7c_4wHMAucUzd1OyLhuK07sW6YBymHiwhI-Bx1u128Y3RcOelIkcvR5xmhg5ySDEMnyZA6xM6fn5wtlub5SY_PQgAmDv2NLrdRkpmJHh5zSF7J39cL">
+                        </div>
+                        <div class="case-study-content">
+                            <div class="case-study-metrics">
+                                <div class="metric">
+                                    <p class="metric-value">120 Tonnes</p>
+                                    <p class="metric-label">Supplied</p>
+
+                                </div>
+                                <div class="metric">
+                                    <p class="metric-value">&pound;12,500</p>
+                                    <p class="metric-label">Budget</p>
+                                </div>
+                                <div class="metric">
+                                    <p class="metric-value">Bulk Delivery</p>
+                                    <p class="metric-label">Logistics</p>
+
+                                </div>
+                            </div>
+                            <p class="case-study-desc">A complete rear garden transformation for a young family in
+                                Penarth. We replaced an overgrown, uneven lawn with Indian sandstone paving, installed
+                                composite raised beds for vegetables, added child-safe artificial turf, and created a
+                                secluded seating area with pergola and festoon lighting. The project was delivered in
+                                just three weeks with minimal disruption.</p>
+                            <div class="case-study-testimonial">
+                                <p>"From the first enquiry to the final delivery, Usk Top Solo were
+                                    exceptional. The quality of the soil for our garden transformation was superior to anything else we saw. Truly specialist service."</p>
+
+                                    room."</p>
+                                <cite>— Tom &amp; Claire, Penarth</cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mid-Page CTA -->
+        <section class="mid-cta" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Ready to Love Your Garden Again?</h2>
+            <p>Tell us what you're looking for and we'll get back to you within the hour — with a free, no-obligation
+                quote. No call-out fees, ever.</p>
+            <div class="mid-cta-btns">
+                <button class="btn-dark"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call
+                    07743 474400</button>
+                <button class="btn-outline-dark"
+                    onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Request a Quote
+                    Online</button>
+            </div>
+        </section>
+
+        <!-- Quote Form Section -->
+        <section class="section quote-section" id="quote" aria-labelledby="quote-heading">
+            <div class="section-inner">
+                <p class="section-label" style="color:var(--primary);">Free, No-Obligation</p>
+                <h2 id="quote-heading" class="section-heading" style="color:white;">Request a Delivery Quote</h2>
+                <p style="color:#94a3b8; max-width:36rem; margin-bottom:3rem;">Tell us how much you need and where it's
+                    going — we'll get back to you within the hour with a price and a delivery date. No hidden fees,
+                    ever.</p>
+                <div class="quote-grid">
+                    <div class="quote-form-wrap">
+                        <form class="quote-form" id="quote-form">
+                            <input type="hidden" name="_subject" value="New Usk Top Soil Quote Request">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" style="display:none">
+                            <div>
+                                <label for="q-name">Full Name</label>
+                                <input type="text" id="q-name" name="Full Name" placeholder="Your name" required>
+                            </div>
+                            <div>
+                                <label for="q-email">Email Address</label>
+                                <input type="email" id="q-email" name="Email" placeholder="you@example.com" required>
+                            </div>
+                            <div>
+                                <label for="q-phone">Phone Number</label>
+                                <input type="tel" id="q-phone" name="Phone" placeholder="07xxx xxx xxx">
+                            </div>
+                            <div>
+                                <label for="q-service">Material Required</label>
+                                <select id="q-service" name="Material Required">
+                                    <option value="">Select material...</option>
+                                    <option value="Top Soil">Top Soil — £50/tonne</option>
+                                    <option value="Sub Soil">Sub Soil — £35/tonne</option>
+                                    <option value="Top Soil &amp; Sub Soil Mix">Top Soil &amp; Sub Soil Mix</option>
+                                    <option value="Not Sure">Not Sure — Please Advise</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="q-quantity">Quantity Needed (approx.)</label>
+                                <select id="q-quantity" name="Quantity">
+                                    <option value="">Select quantity...</option>
+                                    <option value="Less than 1 tonne">Less than 1 tonne</option>
+                                    <option value="1–5 tonnes">1–5 tonnes</option>
+                                    <option value="5–10 tonnes">5–10 tonnes</option>
+                                    <option value="10–20 tonnes">10–20 tonnes</option>
+                                    <option value="20+ tonnes">20+ tonnes (bulk order)</option>
+                                    <option value="Not Sure">Not Sure — Please Advise</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="q-use">Intended Use</label>
+                                <select id="q-use" name="Intended Use">
+                                    <option value="">Select use...</option>
+                                    <option value="Bulk Topsoil Supply">Bulk Topsoil Supply</option>
+                                    <option value="Sub-soil &amp; Filling">Sub-soil &amp; Filling</option>
+                                    <option value="Trade &amp; Bulk Loads">Trade &amp; Bulk Loads</option>
+                                    <option value="Commercial / Large Project">Commercial / Large Project</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="full-width">
+                                <label for="q-desc">Project Description</label>
+                                <textarea id="q-desc" name="Delivery Details"
+                                    placeholder="Tell us your delivery address, access details (e.g. narrow lane, gate width), and any other useful information..."></textarea>
+                            </div>
+                            <div class="full-width">
+                                <button type="submit" class="quote-submit" id="quote-submit-btn">Send My Quote Request
+                                    <span class="material-symbols-outlined"
+                                        aria-hidden="true">arrow_forward</span></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="quote-sidebar">
+                        <div class="trust-card">
+                            <h3>Why Choose Usk Top Soil?</h3>
+                            <div class="trust-card-item">
+                                <div class="trust-card-icon"><span class="material-symbols-outlined"
+                                        aria-hidden="true">verified</span></div>
+                                <div>
+                                    <p class="trust-card-label">Fully Insured</p>
+                                    <p class="trust-card-sub">Public liability &amp; employer's</p>
+                                </div>
+                            </div>
+                            <div class="trust-card-item">
+                                <div class="trust-card-icon"><span class="material-symbols-outlined"
+                                        aria-hidden="true">workspace_premium</span></div>
+                                <div>
+                                    <p class="trust-card-label">NPTC Qualified</p>
+                                    <p class="trust-card-sub">Certified arborists</p>
+                                </div>
+                            </div>
+                            <div class="trust-card-item">
+                                <div class="trust-card-icon"><span class="material-symbols-outlined"
+                                        aria-hidden="true">schedule</span></div>
+                                <div>
+                                    <p class="trust-card-label">Same-Day Response</p>
+                                    <p class="trust-card-sub">We reply within 1 hour</p>
+                                </div>
+                            </div>
+                            <div class="trust-card-item">
+                                <div class="trust-card-icon"><span class="material-symbols-outlined fill-1"
+                                        aria-hidden="true">star</span></div>
+                                <div>
+                                    <p class="trust-card-label">5.0 Google Rating</p>
+                                    <p class="trust-card-sub">50+ verified reviews</p>
+                                </div>
+                            </div>
+                            <div class="trust-card-item">
+                                <div class="trust-card-icon"><span class="material-symbols-outlined"
+                                        aria-hidden="true">handshake</span></div>
+                                <div>
+                                    <p class="trust-card-label">No Subcontractors</p>
+                                    <p class="trust-card-sub">Our team, every time</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quote-phone-callout">
+                            <p>Prefer to talk? Call us directly:</p>
+                            <a href="tel:+447743474400">07743 474400</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Disabled as per request)
+        <section class="section" id="about" aria-labelledby="about-heading" style="overflow:hidden;">
+            <div class="section-inner">
+                <div class="about-grid">
+                    <div class="about-img-wrap">
+                        <div class="about-blur" aria-hidden="true"></div>
+                        <div class="about-img">
+                            <img alt="Completed luxury garden transformation featuring Indian sandstone patio, striped lawn, herbaceous borders, cedar pergola with festoon lighting, and a water feature set against rolling Welsh hills at golden hour"
+                                loading="lazy" src="usk_topsoil_story.png">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="section-label">Our Story</p>
+                        <h2 id="about-heading" class="section-heading">A Family Business Built on Local Trust</h2>
+                        <p class="body">Usk Top Soil started as a father-and-son operation in the Valleys over twenty
+                            years ago. Today, we're a tight-knit team of eight — soil specialists, logistics experts, and 
+                            experienced drivers — all from Usk, Monmouthshire.</p>
+
+                        <p class="body">We're fully insured, FORS compliant for our delivery fleet, and we never use 
+                            third-party hauliers. When you order from us, you get the same premium quality every time, 
+                            delivered by our own experienced drivers. That's why over 90% of our work comes from 
+                            referrals and repeat trade customers.</p>
+
+                        <div class="stats-grid">
+                            <div>
+                                <p class="stat-num">20+</p>
+                                <p class="stat-label">Years in Business</p>
+                            </div>
+                            <div>
+                                <p class="stat-num">500+</p>
+                                <p class="stat-label">Loads Delivered</p>
+                            </div>
+
+                            <div>
+                                <p class="stat-num">5.0</p>
+                                <p class="stat-label">Google Rating</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="text-link" style="text-decoration:none;">Our Process <span
+                                class="material-symbols-outlined" aria-hidden="true">north_east</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Reviews -->
+        <section class="section reviews" id="reviews" aria-labelledby="reviews-heading">
+            <div class="section-inner">
+                <div class="reviews-header">
+                    <div class="stars-row" role="img" aria-label="5 out of 5 stars">
+                        <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                    </div>
+                    <h2 id="reviews-heading" class="section-heading" style="text-align:center;">What Our Customers Say
+                    </h2>
+                    <p style="color:#4b5563; margin-top:0.75rem; text-align:center;">5.0 rating across 50+ Google
+                        reviews</p>
+                </div>
+                <div class="reviews-widget">
+                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-396cd427-5c0d-4317-8911-237e692d97ad" data-elfsight-app-lazy></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Tips Section -->
+        <section class="section" id="blog" aria-labelledby="blog-heading">
+            <div class="section-inner">
+                <div style="text-align:center; margin-bottom:1rem;">
+                    <p class="section-label">Tips &amp; Insights</p>
+                    <h2 id="blog-heading" class="section-heading" style="text-align:center;">Gardening Tips &amp;
+                        Insights</h2>
+                    <p class="section-desc center">Expert advice from our team to help you get the most out of your
+                        garden, whatever the season.</p>
+                </div>
+                <div class="blog-grid">
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card">
+                        <div class="blog-card-img">
+                            <img alt="Spring garden preparation with colourful perennial bulbs and fresh mulch"
+                                loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuATmq8Nep4zabZ6KBXFRgv6MX9k-leIVwyXHN-P0gQBX0-D7MTEo17_cbWwGi5_uKHDuEmUzb7SMcurhsW1ilmIEHlGBcyoGnzYlTCG5mS2aQNaCI3cyFqq5icke8y8pxVdyJ_O3wReS_1H5N6uQMfXRAC3MWSJ6T7cl61xHHhCETG4Tyb-SiyjzllitsAqJKhc3lZjn-5M_CVTQJlZkEkvMwUzn96t0h1YutSj09Fah_el0a2TwJ9pJmLpNcha3vGqRpQSXGW0ZGcP">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">Seasonal Tips</span>
+                            <h3>Spring Preparation: 7 Things Every Welsh Garden Needs</h3>
+                            <p>From late February onwards, there's a window of opportunity to set your garden up for a
+                                stunning summer. Here are our top tips for Usk, Monmouthshire gardens.</p>
+                            <a href="javascript:void(0)" onclick="openBlogModal('spring-prep')" class="blog-card-link">Read More <span class="material-symbols-outlined"
+                                    style="font-size:1rem;" aria-hidden="true">east</span></a>
+
+                        </div>
+                    </article>
+                    <!-- Blog Card 2 -->
+                    <article class="blog-card">
+                        <div class="blog-card-img">
+                            <img alt="Before and after patio installation project in a Newport garden" loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7E-FVsjw3CkQA6qkH0DipeSqiGcE9_pa92hXicuz3X5LWiSKB1z4INOUtC03ShatLkG0etAE2MUBnDBXuH8HIrHp2fCcpDhk8Ow7Zc582SchEtY5WdFPygkGvROohmoHvJ8GY3hI5_ToTjYawcbcleUKlEcym493B23PiyqgSTYWRnAtSPa5-SfYcJIGxQDmcnDUVUyPfDtRPtZwJ--WlWQb9mXdnGCEdjCJhaTQA8xMsqItj3HnJJsIa8gc2AQOhJNmlNchQwnCD">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">Project Spotlight</span>
+                            <h3>From Muddy Patch to Mediterranean Oasis: A Newport Transformation</h3>
+                            <p>See how we turned a waterlogged back garden into a sun-drenched patio retreat with Indian
+                                sandstone, olive trees, and integrated lighting.</p>
+                            <a href="javascript:void(0)" onclick="openBlogModal('newport-transformation')" class="blog-card-link">Read More <span class="material-symbols-outlined"
+                                    style="font-size:1rem;" aria-hidden="true">east</span></a>
+
+                        </div>
+                    </article>
+                    <!-- Blog Card 3 -->
+                    <article class="blog-card">
+                        <div class="blog-card-img">
+                            <img alt="Collection of drought-resistant plants suitable for Welsh climate gardens"
+                                loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4piOpduA2gStj92ODkGopW0xt2qxLrYO_09iNga6Ku9v3KJsGeWLf1HcTnpcL7PHV7193fcDXEMLUHBj_7je4mxZTdVcC7rT1iTYSu4KFUHuCm6k5oeFbeOsNxSqP8fIyXxPdGEgh2BtT1s9_ttskc3i8j4p5eprGkOPuBeMjySrA9OyvvQOrwGclvIaSbTKjahEMuZrlAnUQfvA173JHjGJGrVfo1ttFWdXBjL1FFMswzgrQl1m8MNKb5mggbLkBKim9Guuq4AIH">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">Plant Guide</span>
+                            <h3>Low-Maintenance Plants That Thrive in the Welsh Climate</h3>
+                            <p>Not every garden needs constant upkeep. Discover our favourite resilient perennials,
+                                grasses, and shrubs perfect for Usk, Monmouthshire weather.</p>
+                            <a href="javascript:void(0)" onclick="openBlogModal('welsh-plants')" class="blog-card-link">Read More <span class="material-symbols-outlined"
+                                    style="font-size:1rem;" aria-hidden="true">east</span></a>
+
+                        </div>
+                    </article>
+                </div>
+                <div class="blog-newsletter">
+                    <h3>Get Seasonal Tips Delivered</h3>
+                    <p>Join our mailing list for monthly gardening advice tailored to Usk, Monmouthshire.</p>
+                    <form class="newsletter-form"
+                        onsubmit="event.preventDefault(); alert('Subscribed! Check your inbox.');">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas We Cover -->
+        <section class="section" id="areas" aria-labelledby="areas-heading">
+            <div class="section-inner">
+                <div style="text-align:center; margin-bottom:4rem;">
+                    <h2 id="areas-heading" class="section-heading" style="text-align:center;">Topsoil Delivery Across South
+                        Wales</h2>
+                    <p class="section-desc center">We deliver bulk loads within a 15-mile radius of our base in Usk. 
+                        Please contact us for delivery quotes further afield — we regularly supply projects across the region.</p>
+
+                </div>
+
+                <div class="areas-grid">
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Usk</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Monmouth</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Raglan</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Cwmbran</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Pontypool</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Abergavenny</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Newport</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Chepstow</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Caerleon</p>
+                    </div>
+                </div>
+
+
+                <p class="areas-extended">Also covering: Llandenny, Goytre, Little Mill, Magor, Caldicot, and surrounding Monmouthshire villages</p>
+
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta" aria-labelledby="final-cta-heading">
+            <h2 id="final-cta-heading">Let's Get Started</h2>
+            <p>Whether it's a local garden project or a large-scale bulk delivery, your first step is a free
+                quote. No pressure, no hard sell — just honest advice from people who know soil.</p>
+            <button class="btn-primary" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get Your Delivery Quote <span class="material-symbols-outlined"
+                    aria-hidden="true">arrow_forward</span></button>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-brand">
+                        <img src="uskTopSoil.png" alt="Usk Top Soil Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">Usk & Monmouthshire's trusted topsoil and bulk supply specialists. Fully insured,
+                        family-run, and delivering quality since 2004.</p>
+                    <div class="footer-socials">
+                        <a class="footer-social" href="#" aria-label="Follow us on Facebook"><span
+                                class="material-symbols-outlined" aria-hidden="true">share</span></a>
+                        <a class="footer-social" href="#" aria-label="View our Instagram"><span
+                                class="material-symbols-outlined" aria-hidden="true">photo_camera</span></a>
+                        <a class="footer-social" href="#" aria-label="View our Google reviews"><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-title">Services</p>
+                    <ul>
+                        <li><a href="#services">Bulk Soil Supply</a></li>
+                        <li><a href="#services">Screened Topsoil</a></li>
+                        <li><a href="#services">Sub-soil Delivery</a></li>
+                        <li><a href="#services">Aggregates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <p class="footer-col-title">Get in Touch</p>
+                    <p>Based in the Valleys,<br>Usk, Monmouthshire</p>
+                    <p class="phone">07743 474400</p>
+                    <p>hello@Usk Top Soil.co.uk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Usk Top Soil. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll for anchor links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+    <!-- Quote Form Email Submission -->
+    <script>
+        document.getElementById('quote-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var form = this;
+            var btn = document.getElementById('quote-submit-btn');
+            var origHTML = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true" style="animation:spin 1s linear infinite">progress_activity</span> Sending...';
+            btn.disabled = true;
+
+            // Convert form data to JSON object
+            var formData = new FormData(form);
+            var jsonData = {};
+            formData.forEach(function (value, key) {
+                if (key.charAt(0) !== '_' || key === '_subject' || key === '_template' || key === '_captcha') {
+                    jsonData[key] = value;
+                }
+            });
+
+            fetch('https://formsubmit.co/ajax/cody33912@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+                .then(function (response) {
+                    console.log('FormSubmit response status:', response.status);
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('HTTP ' + response.status);
+                })
+                .then(function (data) {
+                    console.log('FormSubmit response data:', data);
+                    // FormSubmit returns { success: "true" } as a string
+                    if (data.success === 'true' || data.success === true) {
+                        btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">check_circle</span> Quote Sent!';
+                        btn.style.background = '#22c55e';
+                        form.reset();
+                        setTimeout(function () {
+                            btn.innerHTML = origHTML;
+                            btn.style.background = '';
+                            btn.disabled = false;
+                        }, 4000);
+                    } else {
+                        throw new Error(data.message || 'Unexpected response: ' + JSON.stringify(data));
+                    }
+                })
+                .catch(function (err) {
+                    console.error('FormSubmit error:', err);
+                    btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">error</span> Error — try again';
+                    btn.style.background = '#ef4444';
+                    setTimeout(function () {
+                        btn.innerHTML = origHTML;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 4000);
+                });
+        });
+    </script>
+
+    <!-- Spinner animation -->
+    <style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Blog Modal Structure -->
+    <div id="blog-modal" class="modal-overlay" onclick="closeBlogModal(event)">
+        <div class="modal-container" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeBlogModal()" aria-label="Close article">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="modal-content-wrap">
+                <div id="modal-blog-content">
+                    <!-- Content injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Content & Logic -->
+    <script>
+        const blogPosts = {
+            'spring-prep': {
+                category: 'Seasonal Tips',
+                title: 'Spring Preparation: 7 Things Every Welsh Garden Needs',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuATmq8Nep4zabZ6KBXFRgv6MX9k-leIVwyXHN-P0gQBX0-D7MTEo17_cbWwGi5_uKHDuEmUzb7SMcurhsW1ilmIEHlGBcyoGnzYlTCG5mS2aQNaCI3cyFqq5icke8y8pxVdyJ_O3wReS_1H5N6uQMfXRAC3MWSJ6T7cl61xHHhCETG4Tyb-SiyjzllitsAqJKhc3lZjn-5M_CVTQJlZkEkvMwUzn96t0h1YutSj09Fah_el0a2TwJ9pJmLpNcha3vGqRpQSXGW0ZGcP',
+                content: `
+                    <p>Spring in South Wales is a season of transformation. After the heavy winter rains of the Gwent levels, your garden needs a specific strategy to bounce back. Here are our 7 non-negotiables for a stunning Monmouthshire garden.</p>
+                    
+                    <h4>1. Test and Amend Your Soil</h4>
+                    <p>The acidic, clay-heavy soil common in Usk often becomes compacted over winter. Before you start planting, test your pH. Adding a touch of lime can sweeten the soil for your lawn, while a generous spread of high-grade topsoil will restore the nutrients washed away by the rain.</p>
+                    
+                    <h4>2. Lawn Scarification</h4>
+                    <p>Moss thrives in our damp climate. Mechanical scarification in late March is essential to remove thatch and let the grass roots breathe. Follow up with a layer of our "Usk-Gold" topdressing to encourage thick, green growth.</p>
+                    
+                    <h4>3. Clear Your Drainage Paths</h4>
+                    <p>Stagnant water is a plant killer. Ensure your French drains are clear of debris, and check that your gutters aren't overflowing into your flower beds. Proper drainage is the difference between a garden and a bog.</p>
+                    
+                    <h4>4. Pruning and Tidying</h4>
+                    <p>Prune your summer-flowering shrubs like Buddleja and Lavatera now. This stimulates new growth and ensures a massive display of color in July. Clear away the last of the winter leaves to prevent slugs from nesting.</p>
+                    
+                    <h4>5. Edge Your Borders</h4>
+                    <p>If you want that professional look, nothing beats a clean, sharp edge. Use a half-moon edger to redefine your borders. It frames your plants and makes the whole garden look maintained instantly.</p>
+                    
+                    <h4>6. Mulch for Moisture Control</h4>
+                    <p>While we get plenty of rain, the Welsh sun in June can dry out soil surprisingly fast. A 2-inch layer of organic mulch across your beds will lock in moisture and suppress those aggressive spring weeds.</p>
+                    
+                    <h4>7. Feed the Soil, Not Just the Plant</h4>
+                    <p>Instead of chemical quick-fixes, use a slow-release organic fertilizer. It feeds the beneficial bacteria in the soil, creating a long-term ecosystem that will support your garden through the autumn.</p>
+                `
+            },
+            'newport-transformation': {
+                category: 'Project Spotlight',
+                title: 'From Muddy Patch to Mediterranean Oasis',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC7E-FVsjw3CkQA6qkH0DipeSqiGcE9_pa92hXicuz3X5LWiSKB1z4INOUtC03ShatLkG0etAE2MUBnDBXuH8HIrHp2fCcpDhk8Ow7Zc582SchEtY5WdFPygkGvROohmoHvJ8GY3hI5_ToTjYawcbcleUKlEcym493B23PiyqgSTYWRnAtSPa5-SfYcJIGxQDmcnDUVUyPfDtRPtZwJ--WlWQb9mXdnGCEdjCJhaTQA8xMsqItj3HnJJsIa8gc2AQOhJNmlNchQwnCD',
+                content: `
+                    <p>Our recent Newport project was a classic challenge: a waterlogged, north-facing garden that felt like a swamp for eight months of the year. The transformation was dramatic, and here’s how we did it.</p>
+                    
+                    <h4>Step 1: Managing the Water</h4>
+                    <p>Before any aesthetic work began, we installed a comprehensive soakaway system. By digging 1.2m deep drainage trenches and filling them with clean stone, we diverted the Gwent rainwater away from the patio area.</p>
+                    
+                    <h4>Step 2: Choosing Materials</h4>
+                    <p>To brighten a north-facing space, we chose a Fossil Mint Indian Sandstone. The light, warm tones reflect the available sunlight and create a sense of warmth even on overcast days. We paired this with dark basalt setts for a modern, high-contrast border.</p>
+                    
+                    <h4>Step 3: Creating Levels</h4>
+                    <p>By using reclaimed oak railway sleepers, we created two distinct levels. The lower level is a spacious dining area, while the upper level serves as a lush, textured planting zone that feels like a private screen from the neighbors.</p>
+                    
+                    <h4>Step 4: The Mediterranean Vibe</h4>
+                    <p>We selected large, mature Olive trees (Olea europaea) for architectural height. These are surprisingly resilient to the Newport climate if planted with proper drainage. We surrounded them with Mediterranean herbs like Rosemary and Lavender to provide fragrance as you walk by.</p>
+                    
+                    <p>The result is a garden that our client now uses as an extension of their living room. From a muddy patch they avoided to a sun-drenched retreat they never want to leave.</p>
+                `
+            },
+            'welsh-plants': {
+                category: 'Plant Guide',
+                title: 'Low-Maintenance Plants for the Welsh Climate',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD4piOpduA2gStj92ODkGopW0xt2qxLrYO_09iNga6Ku9v3KJsGeWLf1HcTnpcL7PHV7193fcDXEMLUHBj_7je4mxZTdVcC7rT1iTYSu4KFUHuCm6k5oeFbeOsNxSqP8fIyXxPdGEgh2BtT1s9_ttskc3i8j4p5eprGkOPuBeMjySrA9OyvvQOrwGclvIaSbTKjahEMuZrlAnUQfvA173JHjGJGrVfo1ttFWdXBjL1FFMswzgrQl1m8MNKb5mggbLkBKim9Guuq4AIH',
+                content: `
+                    <p>Gardening in Monmouthshire shouldn't be a second full-time job. Our local weather—wet, windy, but relatively mild—is perfect for a variety of robust plants that look stunning with almost zero effort.</p>
+                    
+                    <h4>1. Hellebores (The Lenten Rose)</h4>
+                    <p>The ultimate low-maintenance star. They thrive in the partial shade common in woodland-adjacent gardens. They bloom in late winter when everything else is gray, and their leathery foliage looks good year-round.</p>
+                    
+                    <h4>2. Hydrangea Macrophylla</h4>
+                    <p>A classic for a reason. Hydrangeas love the acidic soil and high humidity of the Welsh valleys. Once established, they only need a quick trim in spring and they'll reward you with massive flower heads that last for months.</p>
+                    
+                    <h4>3. Hardy Ferns (Dryopteris)</h4>
+                    <p>If you have a damp, dark corner where nothing grows, ferns are your best friend. They are incredibly resilient and provide a prehistoric, architectural elegance to your borders without needing any feeding or pruning.</p>
+                    
+                    <h4>4. Heuchera (Coral Bells)</h4>
+                    <p>Available in every color from neon lime to deep burgundy, Heucheras provide foliage color that never fades. They stay low to the ground, suppress weeds, and don't care if it rains for two weeks straight.</p>
+                    
+                    <h4>5. Ornamental Grasses (Carex)</h4>
+                    <p>Carex grasses stay evergreen and provide movement in the garden. They don't need the heavy cutting back that other grasses do—just a quick "comb" with your fingers in spring to remove dead blades.</p>
+                    
+                    <p>Stick to these resilient favorites, and you'll spend less time weeding and more time enjoying your Welsh sanctuary.</p>
+                `
+            }
+        };
+
+        function openBlogModal(id) {
+            const post = blogPosts[id];
+            if (!post) return;
+
+            const modalContent = document.getElementById('modal-blog-content');
+            modalContent.innerHTML = `
+                <div class="modal-blog-header">
+                    <span class="modal-blog-category">${post.category}</span>
+                    <h2 class="modal-blog-title">${post.title}</h2>
+                </div>
+                <img src="${post.image}" alt="${post.title}" class="modal-blog-img">
+                <div class="modal-blog-body">
+                    ${post.content}
+                </div>
+            `;
+
+            const modal = document.getElementById('blog-modal');
+            modal.style.display = 'flex';
+            // Allow display change to take effect before adding class for transition
+            setTimeout(() => {
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }, 10);
+        }
+
+        function closeBlogModal(event) {
+            const modal = document.getElementById('blog-modal');
+            modal.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+            
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeBlogModal();
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>
