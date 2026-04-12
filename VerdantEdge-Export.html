@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Usk Top Soil — trusted topsoil and subsoil suppliers across Usk, Monmouthshire. Delivering bulk loads to Cardiff, Newport, Pontypool, and the Valleys. Fully insured, 5-star Google reviews. Get a free delivery quote today.">
-    <title>Usk Top Soil | Premium Soil Supply & Bulk Deliveries</title>
-
+        content="VerdantEdge Landscapes — trusted landscapers and garden maintenance across South Wales. Covering Cardiff, Newport, Pontypool, the Valleys and beyond. Fully insured, NPTC qualified, 5-star Google reviews. Get a free quote today.">
+    <title>VerdantEdge Landscapes | Premium Garden Design & Landscaping</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
@@ -44,8 +43,6 @@
             color: #1a1a1a;
             background: var(--bg-light);
             line-height: 1.6;
-            overflow-x: hidden;
-            padding-top: 5rem;
         }
 
         img {
@@ -56,7 +53,6 @@
         a {
             text-decoration: none;
             color: inherit;
-            cursor: pointer;
         }
 
         button {
@@ -131,12 +127,22 @@
         .nav-logo {
             display: flex;
             align-items: center;
+            gap: 0.75rem;
         }
 
-        .nav-logo-img {
-            height: 3.5rem;
-            width: auto;
-            display: block;
+        .nav-logo-icon {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 0.375rem;
+            border-radius: 0.5rem;
+            display: flex;
+        }
+
+        .nav-logo-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.025em;
         }
 
         .nav-links {
@@ -183,29 +189,21 @@
             font-weight: 700;
             transition: all 0.2s;
             box-shadow: 0 10px 15px -3px rgba(238, 189, 43, 0.2);
-            cursor: pointer;
-            min-height: 44px;
         }
 
         .nav-cta:hover {
             opacity: 0.9;
         }
 
-        .nav-cta:active {
-            transform: scale(0.97);
-        }
-
         /* ===== HERO ===== */
         .hero {
             position: relative;
             height: 100vh;
-            height: 100dvh;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-top: -5rem;
         }
 
         .hero-bg {
@@ -294,16 +292,10 @@
             align-items: center;
             gap: 0.5rem;
             transition: transform 0.2s;
-            cursor: pointer;
-            min-height: 48px;
         }
 
         .btn-primary:hover {
             transform: scale(1.05);
-        }
-
-        .btn-primary:active {
-            transform: scale(0.97);
         }
 
         .btn-secondary {
@@ -316,16 +308,10 @@
             font-size: 1rem;
             font-weight: 700;
             transition: background 0.2s;
-            cursor: pointer;
-            min-height: 48px;
         }
 
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-secondary:active {
-            transform: scale(0.97);
         }
 
         /* ===== TRUST BAR ===== */
@@ -387,7 +373,7 @@
         }
 
         .section-desc {
-            color: #4b5563;
+            color: #64748b;
             max-width: 42rem;
             line-height: 1.7;
         }
@@ -408,7 +394,7 @@
         }
 
         .services-header-right {
-            color: #4b5563;
+            color: #64748b;
             max-width: 20rem;
             line-height: 1.7;
         }
@@ -476,8 +462,6 @@
             align-items: center;
             gap: 0.5rem;
             transition: gap 0.2s;
-            cursor: pointer;
-            min-height: 44px;
         }
 
         .service-card:hover .service-card-overlay a {
@@ -520,7 +504,7 @@
         }
 
         .project-location {
-            font-size: 0.75rem;
+            font-size: 0.625rem;
             font-weight: 700;
             letter-spacing: 0.2em;
             text-transform: uppercase;
@@ -577,16 +561,10 @@
             align-items: center;
             gap: 0.5rem;
             transition: opacity 0.2s;
-            cursor: pointer;
-            min-height: 48px;
         }
 
         .btn-dark:hover {
             opacity: 0.9;
-        }
-
-        .btn-dark:active {
-            transform: scale(0.97);
         }
 
         .btn-outline-dark {
@@ -598,16 +576,10 @@
             font-size: 1rem;
             font-weight: 700;
             transition: background 0.2s;
-            cursor: pointer;
-            min-height: 48px;
         }
 
         .btn-outline-dark:hover {
             background: rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-outline-dark:active {
-            transform: scale(0.97);
         }
 
         /* ===== ABOUT ===== */
@@ -641,6 +613,7 @@
             border-radius: 1rem;
             overflow: hidden;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: rotate(2deg);
         }
 
         .about-img img {
@@ -655,7 +628,7 @@
         }
 
         .about-text p.body {
-            color: #4b5563;
+            color: #475569;
             font-size: 1.125rem;
             line-height: 1.7;
             margin-bottom: 1rem;
@@ -679,7 +652,7 @@
         }
 
         .stat-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-weight: 700;
@@ -694,21 +667,13 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            transition: color 0.2s, transform 0.2s;
+            transition: color 0.2s;
             background: none;
-            border: none;
-            padding: 0;
             color: inherit;
-            cursor: pointer;
-            min-height: 48px;
         }
 
         .text-link:hover {
             color: var(--primary);
-        }
-
-        .text-link:active {
-            transform: scale(0.97);
         }
 
         /* ===== REVIEWS ===== */
@@ -730,6 +695,73 @@
             margin-bottom: 1rem;
         }
 
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(238, 189, 43, 0.05);
+        }
+
+        .review-card.wide {
+            grid-column: span 2;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 0.125rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .review-stars .material-symbols-outlined {
+            font-size: 0.875rem;
+        }
+
+        .review-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .review-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: rgba(238, 189, 43, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.875rem;
+        }
+
+        .review-name {
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .review-location {
+            font-size: 0.625rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
         /* ===== AREAS ===== */
         .areas-grid {
             display: grid;
@@ -743,8 +775,6 @@
             padding: 1rem 0.75rem;
             text-align: center;
             transition: background 0.2s;
-            cursor: pointer;
-            min-height: 44px;
         }
 
         .area-chip:hover {
@@ -766,7 +796,7 @@
         .areas-extended {
             text-align: center;
             margin-top: 2.5rem;
-            color: #4b5563;
+            color: #64748b;
             font-size: 0.875rem;
             font-style: italic;
         }
@@ -817,14 +847,23 @@
         .footer-brand {
             display: flex;
             align-items: center;
+            gap: 0.75rem;
             color: white;
             margin-bottom: 1.5rem;
         }
 
-        .footer-logo-img {
-            height: 3rem;
-            width: auto;
-            display: block;
+        .footer-brand-icon {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 0.375rem;
+            border-radius: 0.5rem;
+            display: flex;
+        }
+
+        .footer-brand-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-transform: uppercase;
         }
 
         .footer-desc {
@@ -839,15 +878,14 @@
         }
 
         .footer-social {
-            width: 2.75rem;
-            height: 2.75rem;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             border: 1px solid #334155;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
-            cursor: pointer;
         }
 
         .footer-social:hover {
@@ -856,12 +894,8 @@
             border-color: var(--primary);
         }
 
-        .footer-social:active {
-            transform: scale(0.93);
-        }
-
         .footer-social .material-symbols-outlined {
-            font-size: 1rem;
+            font-size: 0.875rem;
         }
 
         .footer-col-title {
@@ -904,10 +938,10 @@
             justify-content: space-between;
             align-items: center;
             gap: 1rem;
-            font-size: 0.75rem;
+            font-size: 0.625rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
         }
 
         .footer-bottom a:hover {
@@ -1072,7 +1106,6 @@
         .quote-form select,
         .quote-form textarea {
             width: 100%;
-            min-height: 48px;
             padding: 0.875rem 1rem;
             border-radius: 0.75rem;
             border: 1px solid rgba(238, 189, 43, 0.15);
@@ -1092,7 +1125,7 @@
 
         .quote-form input::placeholder,
         .quote-form textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.3);
         }
 
         .quote-form textarea {
@@ -1117,16 +1150,10 @@
             gap: 0.5rem;
             transition: transform 0.2s;
             margin-top: 0.5rem;
-            cursor: pointer;
-            min-height: 48px;
         }
 
         .quote-submit:hover {
             transform: scale(1.05);
-        }
-
-        .quote-submit:active {
-            transform: scale(0.97);
         }
 
         .quote-sidebar {
@@ -1209,7 +1236,7 @@
 
         .service-detail-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-top: 3rem;
         }
@@ -1326,11 +1353,11 @@
         }
 
         .metric-label {
-            font-size: 0.75rem;
+            font-size: 0.625rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-weight: 700;
-            color: #4b5563;
+            color: #64748b;
             margin-top: 0.125rem;
         }
 
@@ -1406,7 +1433,7 @@
             display: inline-block;
             background: rgba(238, 189, 43, 0.1);
             color: var(--primary);
-            font-size: 0.75rem;
+            font-size: 0.625rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
@@ -1423,7 +1450,7 @@
         }
 
         .blog-card-body p {
-            color: #4b5563;
+            color: #64748b;
             font-size: 0.875rem;
             line-height: 1.6;
             margin-bottom: 1rem;
@@ -1463,7 +1490,7 @@
         }
 
         .blog-newsletter p {
-            color: #4b5563;
+            color: #64748b;
             margin-bottom: 1.5rem;
         }
 
@@ -1576,239 +1603,10 @@
             }
 
             .service-detail-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== 375px — SMALL PHONES ===== */
-        @media (max-width: 375px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-desc {
-                font-size: 0.9375rem;
-            }
-
-            .section-heading {
-                font-size: 1.5rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .areas-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .trust-bar-inner {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .trust-item span:not(.material-symbols-outlined) {
-                font-size: 0.75rem;
-            }
-
-            .mid-cta h2,
-            .final-cta h2 {
-                font-size: 1.5rem;
-            }
-
-            .btn-primary,
-            .btn-secondary,
-            .btn-dark,
-            .btn-outline-dark {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* ===== 1024px — TABLETS / SMALL DESKTOPS ===== */
-        @media (max-width: 1024px) {
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .nav-links a {
-                font-size: 0.8125rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== 1440px+ — LARGE DESKTOPS ===== */
-        @media (min-width: 1440px) {
-            .section-inner {
-                max-width: 90rem;
-            }
-
-            .hero-content {
-                max-width: 64rem;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        /* ===== BLOG MODAL ===== */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(34, 29, 16, 0.8);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-overlay.open {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-container {
-            background: var(--bg-light);
-            width: 100%;
-            max-width: 50rem;
-            max-height: 90vh;
-            border-radius: 1.5rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            transform: scale(0.95);
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .modal-overlay.open .modal-container {
-            transform: scale(1);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1.25rem;
-            right: 1.25rem;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s;
-        }
-
-        .modal-close:hover {
-            background: var(--primary);
-            transform: rotate(90deg);
-        }
-
-        .modal-content-wrap {
-            overflow-y: auto;
-            max-height: 90vh;
-            padding: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .modal-content-wrap {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        .modal-blog-header {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding-bottom: 2rem;
-        }
-
-        .modal-blog-category {
-            display: inline-block;
-            background: rgba(238, 189, 43, 0.1);
-            color: #b38b1d;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .modal-blog-title {
-            font-size: 2.25rem;
-            line-height: 1.2;
-            color: var(--bg-dark);
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .modal-blog-title {
-                font-size: 1.75rem;
-            }
-        }
-
-        .modal-blog-body {
-            font-size: 1.125rem;
-            color: #444;
-        }
-
-        .modal-blog-body h4 {
-            font-size: 1.375rem;
-            color: var(--bg-dark);
-            margin: 2rem 0 1rem;
-        }
-
-        .modal-blog-body p {
-            margin-bottom: 1.25rem;
-        }
-
-        .modal-blog-body ul {
-            margin-bottom: 1.5rem;
-            list-style: disc;
-            padding-left: 1.5rem;
-        }
-
-        .modal-blog-body li {
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-blog-img {
-            width: 100%;
-            height: 25rem;
-            object-fit: cover;
-            border-radius: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .modal-blog-img {
-                height: 15rem;
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -1820,22 +1618,24 @@
     <header>
         <nav class="glass-nav" aria-label="Main navigation">
             <div class="nav-inner">
-                <a href="#" class="nav-logo">
-                    <img src="uskTopSoil.png" alt="Usk Top Soil Logo" class="nav-logo-img">
-                </a>
+                <div class="nav-logo">
+                    <div class="nav-logo-icon">
+                        <span class="material-symbols-outlined" aria-hidden="true">potted_plant</span>
+                    </div>
+                    <span class="nav-logo-text">VerdantEdge</span>
+                </div>
                 <div class="nav-links">
                     <a href="#services">Services</a>
                     <a href="#projects">Projects</a>
-                    <!-- <a href="#about">Our Story</a> -->
-
+                    <a href="#about">Our Story</a>
                     <a href="#reviews">Reviews</a>
                     <a href="#blog">Blog</a>
                     <a href="#areas">Areas</a>
                 </div>
                 <div class="nav-right">
-                    <a class="nav-phone" href="tel:+447743474400" aria-label="Call us at 07743 474400">
+                    <a class="nav-phone" href="tel:+447000000000" aria-label="Call us at 07000 000 000">
                         <span class="material-symbols-outlined" aria-hidden="true">call</span>
-                        07743 474400
+                        07000 000 000
                     </a>
                     <button class="nav-cta"
                         onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Free
@@ -1858,8 +1658,7 @@
         <nav class="mobile-overlay-links">
             <a href="#services" onclick="document.getElementById('mobile-menu').classList.remove('open')">Services</a>
             <a href="#projects" onclick="document.getElementById('mobile-menu').classList.remove('open')">Projects</a>
-            <!-- <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open')">Our Story</a> -->
-
+            <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open')">Our Story</a>
             <a href="#reviews" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
             <a href="#blog" onclick="document.getElementById('mobile-menu').classList.remove('open')">Blog</a>
             <a href="#areas" onclick="document.getElementById('mobile-menu').classList.remove('open')">Areas</a>
@@ -1867,9 +1666,9 @@
         <button class="mobile-overlay-cta"
             onclick="document.getElementById('mobile-menu').classList.remove('open'); document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get
             a Free Quote</button>
-        <a class="mobile-overlay-phone" href="tel:+447743474400">
+        <a class="mobile-overlay-phone" href="tel:+447000000000">
             <span class="material-symbols-outlined" aria-hidden="true">call</span>
-            07743 474400
+            07000 000 000
         </a>
         <div class="mobile-overlay-socials">
             <a href="#" aria-label="Facebook"><span class="material-symbols-outlined"
@@ -1887,26 +1686,23 @@
         <section class="hero" aria-labelledby="hero-heading">
             <div class="hero-bg">
                 <div class="hero-overlay"></div>
-                <img alt="Beautifully landscaped Usk, Monmouthshire garden with stone pathway surrounded by lush green trees and ferns"
+                <img alt="Beautifully landscaped South Wales garden with stone pathway surrounded by lush green trees and ferns"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4piOpduA2gStj92ODkGopW0xt2qxLrYO_09iNga6Ku9v3KJsGeWLf1HcTnpcL7PHV7193fcDXEMLUHBj_7je4mxZTdVcC7rT1iTYSu4KFUHuCm6k5oeFbeOsNxSqP8fIyXxPdGEgh2BtT1s9_ttskc3i8j4p5eprGkOPuBeMjySrA9OyvvQOrwGclvIaSbTKjahEMuZrlAnUQfvA173JHjGJGrVfo1ttFWdXBjL1FFMswzgrQl1m8MNKb5mggbLkBKim9Guuq4AIH">
             </div>
             <div class="hero-content">
-                <span class="hero-badge">Usk & Monmouthshire's Trusted Topsoil Suppliers</span>
-                <h1 id="hero-heading">Premium Soil<br><span>Delivered to You</span></h1>
-                <p class="hero-desc">High-grade topsoil, sub-soil, and bulk supplies delivered for homes, landscaping
-                    projects, and trade across Newport, Monmouthshire, and the surrounding areas. Fast, reliable
-                    service with 20+ years of expertise.</p>
-
+                <span class="hero-badge">South Wales' Trusted Landscapers</span>
+                <h1 id="hero-heading">Transform Your<br><span>Outdoor Space</span></h1>
+                <p class="hero-desc">Bespoke landscaping, garden design, and expert lawn care across Cardiff, Newport,
+                    Pontypool, and the Valleys. Fully insured with 20+ years of local craftsmanship.</p>
                 <div class="hero-btns">
                     <button class="btn-primary"
-                        onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Delivery
+                        onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get Your Free
                         Quote <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
                     <button class="btn-secondary"
-                        onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Our
-                        Supplies</button>
+                        onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Our
+                        Work</button>
                 </div>
             </div>
-
         </section>
 
         <!-- Trust Bar -->
@@ -1935,107 +1731,178 @@
             </div>
         </section>
 
-        <!-- Prices Section -->
+        <!-- Services Section -->
         <section class="section" id="services" aria-labelledby="services-heading">
             <div class="section-inner">
                 <div class="services-header">
                     <div style="max-width:32rem;">
-                        <p class="section-label">Transparent Pricing</p>
-                        <h2 id="services-heading" class="section-heading">Our Prices</h2>
+                        <p class="section-label">What We Do</p>
+                        <h2 id="services-heading" class="section-heading">Complete Garden &amp; Landscaping Services
+                        </h2>
                     </div>
-                    <p class="services-header-right">Simple, honest pricing for bulk soil and aggregates. Delivering quality
-                        topsoil at affordable prices to Usk and the surrounding areas.</p>
-
+                    <p class="services-header-right">From a one-off garden tidy to a full property transformation — we
+                        handle it all, on time and on budget.</p>
                 </div>
-                <div class="service-detail-grid" style="margin-top:2.5rem;">
-                    <div class="detail-card">
-                        <span class="material-symbols-outlined" aria-hidden="true">landscape</span>
-                        <h4>Top Soil</h4>
-                        <p style="font-size:1.75rem;font-weight:800;color:var(--primary);margin:0.5rem 0;">£50<span
-                                style="font-size:1rem;font-weight:600;color:#4b5563"> / tonne</span></p>
-                        <p>Light, friable and easy to use. Expertly screened and ideal for borders, raised beds, and lawns.</p>
-
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <img alt="Professional landscaping project with stone patio, retaining walls, and ornamental planting in a South Wales garden"
+                            loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbzG9ATcSspq42fpeqQWRVEdKncUGOo0HtIZ0N6X8ti5yGV72Vv9mT7D0Kd5V-NrgTg5Tjnd_veYREMl3e3xr_tfJlvfRHHgsTHJOxGf69yg_QDZSfmmI5EUCLWR5Dq6RYnnSNH8h7dY-w7SedtT6HpM4bI2HvhGPQ6HNzTUGpq_GdlOdihP596GPyw1qldjIh420Hk5rCiFfxVTjvFSIW8qYuj86KM-sfXq6l5mMdAnKv-V9vphkwt_-VS8LY7T526rGyRB6yBOB">
+                        <div class="service-card-overlay">
+                            <h3>Landscaping &amp; Patios</h3>
+                            <p>Full garden transformations — patios, retaining walls, fencing, decking, driveways, and
+                                complete site clearance.</p>
+                            <a href="#" aria-label="Explore our landscaping and patio services">Explore Service <span
+                                    class="material-symbols-outlined" style="font-size:0.875rem;"
+                                    aria-hidden="true">east</span></a>
+                        </div>
                     </div>
-                    <div class="detail-card">
-                        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
-                        <h4>Sub Soil</h4>
-                        <p style="font-size:1.75rem;font-weight:800;color:var(--primary);margin:0.5rem 0;">£35<span
-                                style="font-size:1rem;font-weight:600;color:#4b5563"> / tonne</span></p>
-                        <p>Quality sub soil for foundations, drainage backfill, and bulk build-up work.</p>
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <img alt="Perfectly striped lawn with precision edges on a residential garden in Cardiff"
+                            loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuATmq8Nep4zabZ6KBXFRgv6MX9k-leIVwyXHN-P0gQBX0-D7MTEo17_cbWwGi5_uKHDuEmUzb7SMcurhsW1ilmIEHlGBcyoGnzYlTCG5mS2aQNaCI3cyFqq5icke8y8pxVdyJ_O3wReS_1H5N6uQMfXRAC3MWSJ6T7cl61xHHhCETG4Tyb-SiyjzllitsAqJKhc3lZjn-5M_CVTQJlZkEkvMwUzn96t0h1YutSj09Fah_el0a2TwJ9pJmLpNcha3vGqRpQSXGW0ZGcP">
+                        <div class="service-card-overlay">
+                            <h3>Lawn Care &amp; Maintenance</h3>
+                            <p>Regular mowing, edging, scarifying, weed treatment, and seasonal feeding. We keep it
+                                immaculate so you don't have to.</p>
+                            <a href="#" aria-label="Explore our lawn care and maintenance services">Explore Service
+                                <span class="material-symbols-outlined" style="font-size:0.875rem;"
+                                    aria-hidden="true">east</span></a>
+                        </div>
                     </div>
-                    <div class="detail-card">
-                        <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
-                        <h4>Delivery</h4>
-                        <p style="font-size:1.75rem;font-weight:800;color:var(--primary);margin:0.5rem 0;">£20<span
-                                style="font-size:1rem;font-weight:600;color:#4b5563"> base rate</span></p>
-                        <p>Free delivery within 10 miles of Usk. Then just £2.50 per mile thereafter.</p>
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <img alt="Bespoke architectural garden design with natural stone, water features, and structural planting"
+                            loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4UpqSly-eCfhiZb5XKswRUZF9IvCUbeKByptXwccMhoTh2nK0wBGNm8_7bOhR4cpePb2cy6QjzmZa53I5_ZSYc8fjWkDUyR5I-M5mKaPZiLGawBsP0AMzpYqWZ2Nr96sBVMgKAvRRIPdYnJ8o889eAK7E32dkDBPRCC3KS8cPTdUL16SghDIrxVcdXeKN308m2CCzlD-rIzU6KbsOirgtmkeMG3guf2UOsL0NxUmhCpJRPpHsM4Qu0NNtED1n01GPKgk0_UcYMj1l">
+                        <div class="service-card-overlay">
+                            <h3>Garden Design &amp; Planting</h3>
+                            <p>Bespoke planting plans, raised beds, water features, and seasonal colour schemes designed
+                                to thrive in the Welsh climate.</p>
+                            <a href="#" aria-label="Explore our garden design and planting services">Explore Service
+                                <span class="material-symbols-outlined" style="font-size:0.875rem;"
+                                    aria-hidden="true">east</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="stats-bar" style="margin-top:3rem;">
-                    <div class="stats-bar-item">
-                        <p class="stats-bar-num">10+</p>
-                        <p class="stats-bar-label">Years Supplying</p>
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <img alt="Premium close-board fencing and composite decking installation in a Welsh garden"
+                            loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4UpqSly-eCfhiZb5XKswRUZF9IvCUbeKByptXwccMhoTh2nK0wBGNm8_7bOhR4cpePb2cy6QjzmZa53I5_ZSYc8fjWkDUyR5I-M5mKaPZiLGawBsP0AMzpYqWZ2Nr96sBVMgKAvRRIPdYnJ8o889eAK7E32dkDBPRCC3KS8cPTdUL16SghDIrxVcdXeKN308m2CCzlD-rIzU6KbsOirgtmkeMG3guf2UOsL0NxUmhCpJRPpHsM4Qu0NNtED1n01GPKgk0_UcYMj1l">
+                        <div class="service-card-overlay">
+                            <h3>Fencing &amp; Decking</h3>
+                            <p>Close-board, panel, and composite fencing alongside bespoke timber and composite decking
+                                to extend your living space.</p>
+                            <a href="#" aria-label="Explore our fencing and decking services">Explore Service <span
+                                    class="material-symbols-outlined" style="font-size:0.875rem;"
+                                    aria-hidden="true">east</span></a>
+                        </div>
                     </div>
-                    <div class="stats-bar-item">
-                        <p class="stats-bar-num">40</p>
-                        <p class="stats-bar-label">5-Star Reviews</p>
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <img alt="Professional tree surgeon performing crown reduction on a mature oak in South Wales"
+                            loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGbzG9ATcSspq42fpeqQWRVEdKncUGOo0HtIZ0N6X8ti5yGV72Vv9mT7D0Kd5V-NrgTg5Tjnd_veYREMl3e3xr_tfJlvfRHHgsTHJOxGf69yg_QDZSfmmI5EUCLWR5Dq6RYnnSNH8h7dY-w7SedtT6HpM4bI2HvhGPQ6HNzTUGpq_GdlOdihP596GPyw1qldjIh420Hk5rCiFfxVTjvFSIW8qYuj86KM-sfXq6l5mMdAnKv-V9vphkwt_-VS8LY7T526rGyRB6yBOB">
+                        <div class="service-card-overlay">
+                            <h3>Tree Surgery</h3>
+                            <p>NPTC qualified tree work — crown reduction, felling, stump grinding, and emergency storm
+                                damage clearance.</p>
+                            <a href="#" aria-label="Explore our tree surgery services">Explore Service <span
+                                    class="material-symbols-outlined" style="font-size:0.875rem;"
+                                    aria-hidden="true">east</span></a>
+                        </div>
                     </div>
-                    <div class="stats-bar-item">
-                        <p class="stats-bar-num">£50</p>
-                        <p class="stats-bar-label">Top Soil / Tonne</p>
-                    </div>
-                    <div class="stats-bar-item">
-                        <p class="stats-bar-num">10mi</p>
-                        <p class="stats-bar-label">Free Delivery Radius</p>
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <img alt="Expertly maintained hedges and topiary in a formal Welsh garden setting"
+                            loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nzaRBPnxWrqQUDLgG5VlS4hB2WVhNpijn154-ZLH6yRlga0dmXMugXhjRNppFSWoKebHAHr5Kr-q2F87ZNrsgCeZRuHWRu-4YNHUaZ5GtNzQUe6xTpnWvEM1I2NS5JHTBbrcLxhkJUyE0OS8NN32KWDBwf7c_4wHMAucUzd1OyLhuK07sW6YBymHiwhI-Bx1u128Y3RcOelIkcvR5xmhg5ySDEMnyZA6xM6fn5wtlub5SY_PQgAmDv2NLrdRkpmJHh5zSF7J39cL">
+                        <div class="service-card-overlay">
+                            <h3>Hedge &amp; Shrub Care</h3>
+                            <p>Regular hedge trimming, topiary shaping, shrub pruning, and seasonal maintenance to keep
+                                your borders pristine.</p>
+                            <a href="#" aria-label="Explore our hedge and shrub care services">Explore Service <span
+                                    class="material-symbols-outlined" style="font-size:0.875rem;"
+                                    aria-hidden="true">east</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Clients Section -->
-        <section class="section service-detail-section" aria-labelledby="clients-heading">
+        <!-- Service Detail Section -->
+        <section class="section service-detail-section" aria-labelledby="service-detail-heading">
             <div class="section-inner">
                 <div style="text-align:center;">
-                    <p class="section-label" style="color:var(--primary);">Trusted By</p>
-                    <h2 id="clients-heading" class="section-heading" style="color:white; text-align:center;">Our Clients
-                    </h2>
-                    <p class="section-desc center" style="color:#94a3b8;">We supply premium topsoil to a range of
-                        trusted clients across Usk and Monmouthshire — from golf courses to large-scale construction projects.</p>
-
+                    <p class="section-label" style="color:var(--primary);">What's Included</p>
+                    <h2 id="service-detail-heading" class="section-heading" style="color:white; text-align:center;">
+                        Everything Your Garden Needs</h2>
+                    <p class="section-desc center" style="color:#94a3b8;">From the initial design consultation to the
+                        final clean-up, every service includes a dedicated project manager and a 12-month workmanship
+                        guarantee.</p>
                 </div>
-                <div class="service-detail-grid" style="margin-top:2.5rem;">
+                <div class="service-detail-grid">
                     <div class="detail-card">
-                        <span class="material-symbols-outlined" aria-hidden="true">golf_course</span>
-                        <h4>Usk Golf Course</h4>
-                        <p>Trusted supplier of premium topsoil for course maintenance, tee boxes, and fairway
-                            renovation.</p>
+                        <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+                        <h4>Patios &amp; Paving</h4>
+                        <p>Indian sandstone, porcelain, block paving</p>
                     </div>
                     <div class="detail-card">
-                        <span class="material-symbols-outlined" aria-hidden="true">water</span>
-                        <h4>River Bank Projects</h4>
-                        <p>Providing quality topsoil for river bank restoration and erosion management projects across
-                            the area.</p>
+                        <span class="material-symbols-outlined" aria-hidden="true">wall</span>
+                        <h4>Retaining Walls</h4>
+                        <p>Natural stone and sleeper walls</p>
                     </div>
                     <div class="detail-card">
-                        <span class="material-symbols-outlined" aria-hidden="true">park</span>
-                        <h4>Festival Park</h4>
-                        <p>Supplying bulk topsoil deliveries for large-scale landscaping and public green space
-                            projects across the region.</p>
-
+                        <span class="material-symbols-outlined" aria-hidden="true">route</span>
+                        <h4>Driveways</h4>
+                        <p>Block paving, resin-bound, gravel</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">deck</span>
+                        <h4>Decking</h4>
+                        <p>Timber &amp; composite, balustrades</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                        <h4>Site Clearance</h4>
+                        <p>Full garden clearance &amp; waste removal</p>
+                    </div>
+                    <div class="detail-card">
+                        <span class="material-symbols-outlined" aria-hidden="true">foundation</span>
+                        <h4>Groundwork</h4>
+                        <p>Drainage, levelling, foundations</p>
+                    </div>
+                </div>
+                <div class="stats-bar">
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">150+</p>
+                        <p class="stats-bar-label">Patios Laid</p>
+                    </div>
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">500+</p>
+                        <p class="stats-bar-label">Gardens Transformed</p>
+                    </div>
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">20+</p>
+                        <p class="stats-bar-label">Years Experience</p>
+                    </div>
+                    <div class="stats-bar-item">
+                        <p class="stats-bar-num">1hr</p>
+                        <p class="stats-bar-label">Quote Response</p>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <!-- Projects -->
         <section class="section projects" id="projects" aria-labelledby="projects-heading">
             <div class="section-inner" style="text-align:center; margin-bottom:4rem;">
-                <h2 id="projects-heading" class="section-heading" style="text-align:center;">Supplies &amp; Deliveries</h2>
-                <p class="section-desc center">Recent deliveries and supply partnerships across Usk, Monmouthshire. 
-                    Whether it's a few tonnes for a garden or bulk loads for a major site, we deliver quality every time.</p>
+                <h2 id="projects-heading" class="section-heading" style="text-align:center;">Before &amp; After</h2>
+                <p class="section-desc center">Real transformations from gardens across South Wales. Every project
+                    delivered on time, on budget, and to our exacting standards.</p>
             </div>
-
             <div class="section-inner">
                 <div class="projects-grid">
                     <div class="project-item">
@@ -2088,18 +1955,16 @@
                         <div class="case-study-content">
                             <div class="case-study-metrics">
                                 <div class="metric">
-                                    <p class="metric-value">120 Tonnes</p>
-                                    <p class="metric-label">Supplied</p>
-
+                                    <p class="metric-value">3 Weeks</p>
+                                    <p class="metric-label">Duration</p>
                                 </div>
                                 <div class="metric">
                                     <p class="metric-value">&pound;12,500</p>
                                     <p class="metric-label">Budget</p>
                                 </div>
                                 <div class="metric">
-                                    <p class="metric-value">Bulk Delivery</p>
-                                    <p class="metric-label">Logistics</p>
-
+                                    <p class="metric-value">4 Services</p>
+                                    <p class="metric-label">Combined</p>
                                 </div>
                             </div>
                             <p class="case-study-desc">A complete rear garden transformation for a young family in
@@ -2108,9 +1973,8 @@
                                 secluded seating area with pergola and festoon lighting. The project was delivered in
                                 just three weeks with minimal disruption.</p>
                             <div class="case-study-testimonial">
-                                <p>"From the first enquiry to the final delivery, Usk Top Solo were
-                                    exceptional. The quality of the soil for our garden transformation was superior to anything else we saw. Truly specialist service."</p>
-
+                                <p>"From the 3D design stage right through to the final clean-up, VerdantEdge were
+                                    exceptional. The kids practically live out there now. It's like we've gained another
                                     room."</p>
                                 <cite>— Tom &amp; Claire, Penarth</cite>
                             </div>
@@ -2127,7 +1991,7 @@
                 quote. No call-out fees, ever.</p>
             <div class="mid-cta-btns">
                 <button class="btn-dark"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call
-                    07743 474400</button>
+                    07000 000 000</button>
                 <button class="btn-outline-dark"
                     onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Request a Quote
                     Online</button>
@@ -2138,14 +2002,14 @@
         <section class="section quote-section" id="quote" aria-labelledby="quote-heading">
             <div class="section-inner">
                 <p class="section-label" style="color:var(--primary);">Free, No-Obligation</p>
-                <h2 id="quote-heading" class="section-heading" style="color:white;">Request a Delivery Quote</h2>
-                <p style="color:#94a3b8; max-width:36rem; margin-bottom:3rem;">Tell us how much you need and where it's
-                    going — we'll get back to you within the hour with a price and a delivery date. No hidden fees,
-                    ever.</p>
+                <h2 id="quote-heading" class="section-heading" style="color:white;">Get Your Free Quote</h2>
+                <p style="color:#94a3b8; max-width:36rem; margin-bottom:3rem;">Tell us about your project and we'll get
+                    back to you within the hour. No call-out fees, no hard sell — just honest advice from people who
+                    love what they do.</p>
                 <div class="quote-grid">
                     <div class="quote-form-wrap">
                         <form class="quote-form" id="quote-form">
-                            <input type="hidden" name="_subject" value="New Usk Top Soil Quote Request">
+                            <input type="hidden" name="_subject" value="New VerdantEdge Quote Request">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
                             <input type="text" name="_honey" style="display:none">
@@ -2162,42 +2026,48 @@
                                 <input type="tel" id="q-phone" name="Phone" placeholder="07xxx xxx xxx">
                             </div>
                             <div>
-                                <label for="q-service">Material Required</label>
-                                <select id="q-service" name="Material Required">
-                                    <option value="">Select material...</option>
-                                    <option value="Top Soil">Top Soil — £50/tonne</option>
-                                    <option value="Sub Soil">Sub Soil — £35/tonne</option>
-                                    <option value="Top Soil &amp; Sub Soil Mix">Top Soil &amp; Sub Soil Mix</option>
-                                    <option value="Not Sure">Not Sure — Please Advise</option>
+                                <label for="q-service">Service Required</label>
+                                <select id="q-service" name="Service Required">
+                                    <option value="">Select a service...</option>
+                                    <option value="Landscaping &amp; Patios">Landscaping &amp; Patios</option>
+                                    <option value="Lawn Care &amp; Maintenance">Lawn Care &amp; Maintenance</option>
+                                    <option value="Garden Design &amp; Planting">Garden Design &amp; Planting</option>
+                                    <option value="Fencing &amp; Decking">Fencing &amp; Decking</option>
+                                    <option value="Tree Surgery">Tree Surgery</option>
+                                    <option value="Hedge &amp; Shrub Care">Hedge &amp; Shrub Care</option>
+                                    <option value="Other / Not Sure">Other / Not Sure</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="q-quantity">Quantity Needed (approx.)</label>
-                                <select id="q-quantity" name="Quantity">
-                                    <option value="">Select quantity...</option>
-                                    <option value="Less than 1 tonne">Less than 1 tonne</option>
-                                    <option value="1–5 tonnes">1–5 tonnes</option>
-                                    <option value="5–10 tonnes">5–10 tonnes</option>
-                                    <option value="10–20 tonnes">10–20 tonnes</option>
-                                    <option value="20+ tonnes">20+ tonnes (bulk order)</option>
-                                    <option value="Not Sure">Not Sure — Please Advise</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="q-use">Intended Use</label>
-                                <select id="q-use" name="Intended Use">
-                                    <option value="">Select use...</option>
-                                    <option value="Bulk Topsoil Supply">Bulk Topsoil Supply</option>
-                                    <option value="Sub-soil &amp; Filling">Sub-soil &amp; Filling</option>
-                                    <option value="Trade &amp; Bulk Loads">Trade &amp; Bulk Loads</option>
-                                    <option value="Commercial / Large Project">Commercial / Large Project</option>
+                                <label for="q-area">Your Area</label>
+                                <select id="q-area" name="Area">
+                                    <option value="">Select your area...</option>
+                                    <option value="Cardiff">Cardiff</option>
+                                    <option value="Newport">Newport</option>
+                                    <option value="Pontypool">Pontypool</option>
+                                    <option value="Abergavenny">Abergavenny</option>
+                                    <option value="Cwmbran">Cwmbran</option>
+                                    <option value="Barry">Barry</option>
+                                    <option value="Penarth">Penarth</option>
+                                    <option value="Caerphilly">Caerphilly</option>
                                     <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="q-budget">Estimated Budget</label>
+                                <select id="q-budget" name="Budget">
+                                    <option value="">Select budget range...</option>
+                                    <option value="Under £1,000">Under &pound;1,000</option>
+                                    <option value="£1,000 – £5,000">&pound;1,000 – &pound;5,000</option>
+                                    <option value="£5,000 – £15,000">&pound;5,000 – &pound;15,000</option>
+                                    <option value="£15,000+">&pound;15,000+</option>
+                                    <option value="Not Sure Yet">Not Sure Yet</option>
                                 </select>
                             </div>
                             <div class="full-width">
                                 <label for="q-desc">Project Description</label>
-                                <textarea id="q-desc" name="Delivery Details"
-                                    placeholder="Tell us your delivery address, access details (e.g. narrow lane, gate width), and any other useful information..."></textarea>
+                                <textarea id="q-desc" name="Project Description"
+                                    placeholder="Tell us about your garden and what you'd like us to do..."></textarea>
                             </div>
                             <div class="full-width">
                                 <button type="submit" class="quote-submit" id="quote-submit-btn">Send My Quote Request
@@ -2208,7 +2078,7 @@
                     </div>
                     <div class="quote-sidebar">
                         <div class="trust-card">
-                            <h3>Why Choose Usk Top Soil?</h3>
+                            <h3>Why Choose VerdantEdge?</h3>
                             <div class="trust-card-item">
                                 <div class="trust-card-icon"><span class="material-symbols-outlined"
                                         aria-hidden="true">verified</span></div>
@@ -2252,36 +2122,34 @@
                         </div>
                         <div class="quote-phone-callout">
                             <p>Prefer to talk? Call us directly:</p>
-                            <a href="tel:+447743474400">07743 474400</a>
+                            <a href="tel:+447000000000">07000 000 000</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section (Disabled as per request)
+        <!-- About Section -->
         <section class="section" id="about" aria-labelledby="about-heading" style="overflow:hidden;">
             <div class="section-inner">
                 <div class="about-grid">
                     <div class="about-img-wrap">
                         <div class="about-blur" aria-hidden="true"></div>
                         <div class="about-img">
-                            <img alt="Completed luxury garden transformation featuring Indian sandstone patio, striped lawn, herbaceous borders, cedar pergola with festoon lighting, and a water feature set against rolling Welsh hills at golden hour"
-                                loading="lazy" src="usk_topsoil_story.png">
+                            <img alt="VerdantEdge team working together on a landscape project in South Wales"
+                                loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeywxU055sO__rWSZyO4F5fYilMYGGtaPFnbpe6Auexj3pbCqU510F2R7P8wJE6NKkoio6cYrugQx9GXodaG9aVMWvnKAImJqiBmrtuKD_QZ7QuRxypm8fD3RJN1fbrduqPaUEXr3X0bDq3QGVsowO0DIlV8uJrdxw2CcdeKWmWVgsKiUdp1e2fGv06p0sQelDFVeP9YPSeFwAJ_q9ltpbnUIujYKgC5ontbg4HDLiIcvttw5mNAMe9ErkGGtZP013CbRVYC6VUAWI">
                         </div>
                     </div>
                     <div class="about-text">
                         <p class="section-label">Our Story</p>
                         <h2 id="about-heading" class="section-heading">A Family Business Built on Local Trust</h2>
-                        <p class="body">Usk Top Soil started as a father-and-son operation in the Valleys over twenty
-                            years ago. Today, we're a tight-knit team of eight — soil specialists, logistics experts, and 
-                            experienced drivers — all from Usk, Monmouthshire.</p>
-
-                        <p class="body">We're fully insured, FORS compliant for our delivery fleet, and we never use 
-                            third-party hauliers. When you order from us, you get the same premium quality every time, 
-                            delivered by our own experienced drivers. That's why over 90% of our work comes from 
-                            referrals and repeat trade customers.</p>
-
+                        <p class="body">VerdantEdge started as a father-and-son operation in the Valleys over twenty
+                            years ago. Today, we're a tight-knit team of eight — landscapers, horticulturists, and tree
+                            surgeons — all from South Wales.</p>
+                        <p class="body">We're fully insured, NPTC qualified for tree work, and we never subcontract.
+                            When you hire us, you get us — the same team from first visit to final clean-up. That's why
+                            over 90% of our work comes from referrals and repeat customers.</p>
                         <div class="stats-grid">
                             <div>
                                 <p class="stat-num">20+</p>
@@ -2289,21 +2157,19 @@
                             </div>
                             <div>
                                 <p class="stat-num">500+</p>
-                                <p class="stat-label">Loads Delivered</p>
+                                <p class="stat-label">Gardens Transformed</p>
                             </div>
-
                             <div>
                                 <p class="stat-num">5.0</p>
                                 <p class="stat-label">Google Rating</p>
                             </div>
                         </div>
-                        <a href="#contact" class="text-link" style="text-decoration:none;">Our Process <span
-                                class="material-symbols-outlined" aria-hidden="true">north_east</span></a>
+                        <button class="text-link">Meet The Team <span class="material-symbols-outlined"
+                                aria-hidden="true">north_east</span></button>
                     </div>
                 </div>
             </div>
         </section>
-        -->
 
         <!-- Reviews -->
         <section class="section reviews" id="reviews" aria-labelledby="reviews-heading">
@@ -2318,13 +2184,109 @@
                     </div>
                     <h2 id="reviews-heading" class="section-heading" style="text-align:center;">What Our Customers Say
                     </h2>
-                    <p style="color:#4b5563; margin-top:0.75rem; text-align:center;">5.0 rating across 50+ Google
+                    <p style="color:#64748b; margin-top:0.75rem; text-align:center;">5.0 rating across 50+ Google
                         reviews</p>
                 </div>
-                <div class="reviews-widget">
-                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-                    <script src="https://elfsightcdn.com/platform.js" async></script>
-                    <div class="elfsight-app-396cd427-5c0d-4317-8911-237e692d97ad" data-elfsight-app-lazy></div>
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+                            <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        </div>
+                        <p class="review-text">"Turned our muddy, overgrown back garden into an absolute paradise. The
+                            patio work was flawless and they even built custom raised beds for the kids. Can't recommend
+                            them enough."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">RH</div>
+                            <div>
+                                <p class="review-name">Rhian Hughes</p>
+                                <p class="review-location">Pontypool</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+                            <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        </div>
+                        <p class="review-text">"Professional from start to finish. They replaced 30 metres of rotten
+                            fencing and cleared the entire site in a single day. Tidy, respectful, and great value for
+                            money."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">DW</div>
+                            <div>
+                                <p class="review-name">Dai Williams</p>
+                                <p class="review-location">Cardiff</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+                            <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        </div>
+                        <p class="review-text">"We had a complete garden redesign — new Indian sandstone patio,
+                            artificial turf for the dog, and beautiful planting around the borders. The design was
+                            breathtaking."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">SE</div>
+                            <div>
+                                <p class="review-name">Sarah Edwards</p>
+                                <p class="review-location">Penarth</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+                            <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        </div>
+                        <p class="review-text">"Had two large conifers removed and the stumps ground out. Fast, safe,
+                            and they left the garden cleaner than they found it. Will definitely use again."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">MP</div>
+                            <div>
+                                <p class="review-name">Mark Price</p>
+                                <p class="review-location">Abergavenny</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 5 -->
+                    <div class="review-card wide">
+                        <div class="review-stars" role="img" aria-label="5 out of 5 stars">
+                            <span class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span><span
+                                class="material-symbols-outlined fill-1" aria-hidden="true">star</span>
+                        </div>
+                        <p class="review-text">"We've been using VerdantEdge for monthly maintenance for three years
+                            now. They do the lawns, hedges, and seasonal planting. Our garden has never looked better
+                            and it's completely hands-off for us. Worth every penny."</p>
+                        <div class="review-author">
+                            <div class="review-avatar">LJ</div>
+                            <div>
+                                <p class="review-name">Lowri James</p>
+                                <p class="review-location">Newport</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2351,10 +2313,9 @@
                             <span class="blog-category">Seasonal Tips</span>
                             <h3>Spring Preparation: 7 Things Every Welsh Garden Needs</h3>
                             <p>From late February onwards, there's a window of opportunity to set your garden up for a
-                                stunning summer. Here are our top tips for Usk, Monmouthshire gardens.</p>
-                            <a href="javascript:void(0)" onclick="openBlogModal('spring-prep')" class="blog-card-link">Read More <span class="material-symbols-outlined"
+                                stunning summer. Here are our top tips for South Wales gardens.</p>
+                            <a href="#" class="blog-card-link">Read More <span class="material-symbols-outlined"
                                     style="font-size:1rem;" aria-hidden="true">east</span></a>
-
                         </div>
                     </article>
                     <!-- Blog Card 2 -->
@@ -2368,9 +2329,8 @@
                             <h3>From Muddy Patch to Mediterranean Oasis: A Newport Transformation</h3>
                             <p>See how we turned a waterlogged back garden into a sun-drenched patio retreat with Indian
                                 sandstone, olive trees, and integrated lighting.</p>
-                            <a href="javascript:void(0)" onclick="openBlogModal('newport-transformation')" class="blog-card-link">Read More <span class="material-symbols-outlined"
+                            <a href="#" class="blog-card-link">Read More <span class="material-symbols-outlined"
                                     style="font-size:1rem;" aria-hidden="true">east</span></a>
-
                         </div>
                     </article>
                     <!-- Blog Card 3 -->
@@ -2384,16 +2344,15 @@
                             <span class="blog-category">Plant Guide</span>
                             <h3>Low-Maintenance Plants That Thrive in the Welsh Climate</h3>
                             <p>Not every garden needs constant upkeep. Discover our favourite resilient perennials,
-                                grasses, and shrubs perfect for Usk, Monmouthshire weather.</p>
-                            <a href="javascript:void(0)" onclick="openBlogModal('welsh-plants')" class="blog-card-link">Read More <span class="material-symbols-outlined"
+                                grasses, and shrubs perfect for South Wales weather.</p>
+                            <a href="#" class="blog-card-link">Read More <span class="material-symbols-outlined"
                                     style="font-size:1rem;" aria-hidden="true">east</span></a>
-
                         </div>
                     </article>
                 </div>
                 <div class="blog-newsletter">
                     <h3>Get Seasonal Tips Delivered</h3>
-                    <p>Join our mailing list for monthly gardening advice tailored to Usk, Monmouthshire.</p>
+                    <p>Join our mailing list for monthly gardening advice tailored to South Wales.</p>
                     <form class="newsletter-form"
                         onsubmit="event.preventDefault(); alert('Subscribed! Check your inbox.');">
                         <input type="email" placeholder="your@email.com" required>
@@ -2407,25 +2366,17 @@
         <section class="section" id="areas" aria-labelledby="areas-heading">
             <div class="section-inner">
                 <div style="text-align:center; margin-bottom:4rem;">
-                    <h2 id="areas-heading" class="section-heading" style="text-align:center;">Topsoil Delivery Across South
+                    <h2 id="areas-heading" class="section-heading" style="text-align:center;">Landscapers Across South
                         Wales</h2>
-                    <p class="section-desc center">We deliver bulk loads within a 15-mile radius of our base in Usk. 
-                        Please contact us for delivery quotes further afield — we regularly supply projects across the region.</p>
-
+                    <p class="section-desc center">We cover a 30-mile radius from our base in the Valleys. If your area
+                        isn't listed, give us a call — chances are we can help.</p>
                 </div>
-
                 <div class="areas-grid">
                     <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Usk</p>
+                        <p>Cardiff</p>
                     </div>
                     <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Monmouth</p>
-                    </div>
-                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Raglan</p>
-                    </div>
-                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Cwmbran</p>
+                        <p>Newport</p>
                     </div>
                     <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <p>Pontypool</p>
@@ -2434,30 +2385,42 @@
                         <p>Abergavenny</p>
                     </div>
                     <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Newport</p>
+                        <p>Cwmbran</p>
                     </div>
                     <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Chepstow</p>
+                        <p>Barry</p>
                     </div>
                     <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-                        <p>Caerleon</p>
+                        <p>Penarth</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Caerphilly</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Monmouth</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Ebbw Vale</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Abertillery</p>
+                    </div>
+                    <div class="area-chip"><span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                        <p>Pontypridd</p>
                     </div>
                 </div>
-
-
-                <p class="areas-extended">Also covering: Llandenny, Goytre, Little Mill, Magor, Caldicot, and surrounding Monmouthshire villages</p>
-
+                <p class="areas-extended">Also covering: Swansea, Bridgend, Neath Port Talbot, Merthyr Tydfil, Usk,
+                    Chepstow, and surrounding villages</p>
             </div>
         </section>
 
         <!-- Final CTA -->
         <section class="final-cta" aria-labelledby="final-cta-heading">
             <h2 id="final-cta-heading">Let's Get Started</h2>
-            <p>Whether it's a local garden project or a large-scale bulk delivery, your first step is a free
-                quote. No pressure, no hard sell — just honest advice from people who know soil.</p>
-            <button class="btn-primary" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get Your Delivery Quote <span class="material-symbols-outlined"
+            <p>Whether it's a quick tidy-up or a full garden transformation, your first step is a free chat. No
+                pressure, no hard sell — just honest advice from people who love what they do.</p>
+            <button class="btn-primary">Get Your Free Quote <span class="material-symbols-outlined"
                     aria-hidden="true">arrow_forward</span></button>
-
         </section>
 
     </main>
@@ -2467,11 +2430,13 @@
         <div class="footer-inner">
             <div class="footer-grid">
                 <div>
-                    <a href="#" class="footer-brand">
-                        <img src="uskTopSoil.png" alt="Usk Top Soil Logo" class="footer-logo-img">
-                    </a>
-                    <p class="footer-desc">Usk & Monmouthshire's trusted topsoil and bulk supply specialists. Fully insured,
-                        family-run, and delivering quality since 2004.</p>
+                    <div class="footer-brand">
+                        <div class="footer-brand-icon"><span class="material-symbols-outlined"
+                                aria-hidden="true">potted_plant</span></div>
+                        <span class="footer-brand-text">VerdantEdge</span>
+                    </div>
+                    <p class="footer-desc">South Wales' trusted landscaping and garden maintenance team. Fully insured,
+                        NPTC qualified, and committed to quality craftsmanship that lasts.</p>
                     <div class="footer-socials">
                         <a class="footer-social" href="#" aria-label="Follow us on Facebook"><span
                                 class="material-symbols-outlined" aria-hidden="true">share</span></a>
@@ -2484,21 +2449,22 @@
                 <div class="footer-col">
                     <p class="footer-col-title">Services</p>
                     <ul>
-                        <li><a href="#services">Bulk Soil Supply</a></li>
-                        <li><a href="#services">Screened Topsoil</a></li>
-                        <li><a href="#services">Sub-soil Delivery</a></li>
-                        <li><a href="#services">Aggregates</a></li>
+                        <li><a href="#">Landscaping &amp; Patios</a></li>
+                        <li><a href="#">Lawn Care</a></li>
+                        <li><a href="#">Garden Design</a></li>
+                        <li><a href="#">Fencing &amp; Decking</a></li>
+                        <li><a href="#">Tree Surgery</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-contact">
                     <p class="footer-col-title">Get in Touch</p>
-                    <p>Based in the Valleys,<br>Usk, Monmouthshire</p>
-                    <p class="phone">07743 474400</p>
-                    <p>hello@Usk Top Soil.co.uk</p>
+                    <p>Based in the Valleys,<br>South Wales</p>
+                    <p class="phone">07000 000 000</p>
+                    <p>hello@verdantedge.co.uk</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Usk Top Soil. All Rights Reserved.</p>
+                <p>&copy; 2026 VerdantEdge Landscapes. All Rights Reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -2557,7 +2523,7 @@
                 .then(function (data) {
                     console.log('FormSubmit response data:', data);
                     // FormSubmit returns { success: "true" } as a string
-                    if (data.success === 'true' || data.success === true) {
+                    if (data.success === 'true' || data.success === true || data.message) {
                         btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">check_circle</span> Quote Sent!';
                         btn.style.background = '#22c55e';
                         form.reset();
@@ -2567,7 +2533,7 @@
                             btn.disabled = false;
                         }, 4000);
                     } else {
-                        throw new Error(data.message || 'Unexpected response: ' + JSON.stringify(data));
+                        throw new Error('Unexpected response: ' + JSON.stringify(data));
                     }
                 })
                 .catch(function (err) {
@@ -2596,145 +2562,6 @@
         }
     </style>
 
-    <!-- Blog Modal Structure -->
-    <div id="blog-modal" class="modal-overlay" onclick="closeBlogModal(event)">
-        <div class="modal-container" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeBlogModal()" aria-label="Close article">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-            <div class="modal-content-wrap">
-                <div id="modal-blog-content">
-                    <!-- Content injected via JS -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Blog Content & Logic -->
-    <script>
-        const blogPosts = {
-            'spring-prep': {
-                category: 'Seasonal Tips',
-                title: 'Spring Preparation: 7 Things Every Welsh Garden Needs',
-                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuATmq8Nep4zabZ6KBXFRgv6MX9k-leIVwyXHN-P0gQBX0-D7MTEo17_cbWwGi5_uKHDuEmUzb7SMcurhsW1ilmIEHlGBcyoGnzYlTCG5mS2aQNaCI3cyFqq5icke8y8pxVdyJ_O3wReS_1H5N6uQMfXRAC3MWSJ6T7cl61xHHhCETG4Tyb-SiyjzllitsAqJKhc3lZjn-5M_CVTQJlZkEkvMwUzn96t0h1YutSj09Fah_el0a2TwJ9pJmLpNcha3vGqRpQSXGW0ZGcP',
-                content: `
-                    <p>Spring in South Wales is a season of transformation. After the heavy winter rains of the Gwent levels, your garden needs a specific strategy to bounce back. Here are our 7 non-negotiables for a stunning Monmouthshire garden.</p>
-                    
-                    <h4>1. Test and Amend Your Soil</h4>
-                    <p>The acidic, clay-heavy soil common in Usk often becomes compacted over winter. Before you start planting, test your pH. Adding a touch of lime can sweeten the soil for your lawn, while a generous spread of high-grade topsoil will restore the nutrients washed away by the rain.</p>
-                    
-                    <h4>2. Lawn Scarification</h4>
-                    <p>Moss thrives in our damp climate. Mechanical scarification in late March is essential to remove thatch and let the grass roots breathe. Follow up with a layer of our "Usk-Gold" topdressing to encourage thick, green growth.</p>
-                    
-                    <h4>3. Clear Your Drainage Paths</h4>
-                    <p>Stagnant water is a plant killer. Ensure your French drains are clear of debris, and check that your gutters aren't overflowing into your flower beds. Proper drainage is the difference between a garden and a bog.</p>
-                    
-                    <h4>4. Pruning and Tidying</h4>
-                    <p>Prune your summer-flowering shrubs like Buddleja and Lavatera now. This stimulates new growth and ensures a massive display of color in July. Clear away the last of the winter leaves to prevent slugs from nesting.</p>
-                    
-                    <h4>5. Edge Your Borders</h4>
-                    <p>If you want that professional look, nothing beats a clean, sharp edge. Use a half-moon edger to redefine your borders. It frames your plants and makes the whole garden look maintained instantly.</p>
-                    
-                    <h4>6. Mulch for Moisture Control</h4>
-                    <p>While we get plenty of rain, the Welsh sun in June can dry out soil surprisingly fast. A 2-inch layer of organic mulch across your beds will lock in moisture and suppress those aggressive spring weeds.</p>
-                    
-                    <h4>7. Feed the Soil, Not Just the Plant</h4>
-                    <p>Instead of chemical quick-fixes, use a slow-release organic fertilizer. It feeds the beneficial bacteria in the soil, creating a long-term ecosystem that will support your garden through the autumn.</p>
-                `
-            },
-            'newport-transformation': {
-                category: 'Project Spotlight',
-                title: 'From Muddy Patch to Mediterranean Oasis',
-                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC7E-FVsjw3CkQA6qkH0DipeSqiGcE9_pa92hXicuz3X5LWiSKB1z4INOUtC03ShatLkG0etAE2MUBnDBXuH8HIrHp2fCcpDhk8Ow7Zc582SchEtY5WdFPygkGvROohmoHvJ8GY3hI5_ToTjYawcbcleUKlEcym493B23PiyqgSTYWRnAtSPa5-SfYcJIGxQDmcnDUVUyPfDtRPtZwJ--WlWQb9mXdnGCEdjCJhaTQA8xMsqItj3HnJJsIa8gc2AQOhJNmlNchQwnCD',
-                content: `
-                    <p>Our recent Newport project was a classic challenge: a waterlogged, north-facing garden that felt like a swamp for eight months of the year. The transformation was dramatic, and here’s how we did it.</p>
-                    
-                    <h4>Step 1: Managing the Water</h4>
-                    <p>Before any aesthetic work began, we installed a comprehensive soakaway system. By digging 1.2m deep drainage trenches and filling them with clean stone, we diverted the Gwent rainwater away from the patio area.</p>
-                    
-                    <h4>Step 2: Choosing Materials</h4>
-                    <p>To brighten a north-facing space, we chose a Fossil Mint Indian Sandstone. The light, warm tones reflect the available sunlight and create a sense of warmth even on overcast days. We paired this with dark basalt setts for a modern, high-contrast border.</p>
-                    
-                    <h4>Step 3: Creating Levels</h4>
-                    <p>By using reclaimed oak railway sleepers, we created two distinct levels. The lower level is a spacious dining area, while the upper level serves as a lush, textured planting zone that feels like a private screen from the neighbors.</p>
-                    
-                    <h4>Step 4: The Mediterranean Vibe</h4>
-                    <p>We selected large, mature Olive trees (Olea europaea) for architectural height. These are surprisingly resilient to the Newport climate if planted with proper drainage. We surrounded them with Mediterranean herbs like Rosemary and Lavender to provide fragrance as you walk by.</p>
-                    
-                    <p>The result is a garden that our client now uses as an extension of their living room. From a muddy patch they avoided to a sun-drenched retreat they never want to leave.</p>
-                `
-            },
-            'welsh-plants': {
-                category: 'Plant Guide',
-                title: 'Low-Maintenance Plants for the Welsh Climate',
-                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD4piOpduA2gStj92ODkGopW0xt2qxLrYO_09iNga6Ku9v3KJsGeWLf1HcTnpcL7PHV7193fcDXEMLUHBj_7je4mxZTdVcC7rT1iTYSu4KFUHuCm6k5oeFbeOsNxSqP8fIyXxPdGEgh2BtT1s9_ttskc3i8j4p5eprGkOPuBeMjySrA9OyvvQOrwGclvIaSbTKjahEMuZrlAnUQfvA173JHjGJGrVfo1ttFWdXBjL1FFMswzgrQl1m8MNKb5mggbLkBKim9Guuq4AIH',
-                content: `
-                    <p>Gardening in Monmouthshire shouldn't be a second full-time job. Our local weather—wet, windy, but relatively mild—is perfect for a variety of robust plants that look stunning with almost zero effort.</p>
-                    
-                    <h4>1. Hellebores (The Lenten Rose)</h4>
-                    <p>The ultimate low-maintenance star. They thrive in the partial shade common in woodland-adjacent gardens. They bloom in late winter when everything else is gray, and their leathery foliage looks good year-round.</p>
-                    
-                    <h4>2. Hydrangea Macrophylla</h4>
-                    <p>A classic for a reason. Hydrangeas love the acidic soil and high humidity of the Welsh valleys. Once established, they only need a quick trim in spring and they'll reward you with massive flower heads that last for months.</p>
-                    
-                    <h4>3. Hardy Ferns (Dryopteris)</h4>
-                    <p>If you have a damp, dark corner where nothing grows, ferns are your best friend. They are incredibly resilient and provide a prehistoric, architectural elegance to your borders without needing any feeding or pruning.</p>
-                    
-                    <h4>4. Heuchera (Coral Bells)</h4>
-                    <p>Available in every color from neon lime to deep burgundy, Heucheras provide foliage color that never fades. They stay low to the ground, suppress weeds, and don't care if it rains for two weeks straight.</p>
-                    
-                    <h4>5. Ornamental Grasses (Carex)</h4>
-                    <p>Carex grasses stay evergreen and provide movement in the garden. They don't need the heavy cutting back that other grasses do—just a quick "comb" with your fingers in spring to remove dead blades.</p>
-                    
-                    <p>Stick to these resilient favorites, and you'll spend less time weeding and more time enjoying your Welsh sanctuary.</p>
-                `
-            }
-        };
-
-        function openBlogModal(id) {
-            const post = blogPosts[id];
-            if (!post) return;
-
-            const modalContent = document.getElementById('modal-blog-content');
-            modalContent.innerHTML = `
-                <div class="modal-blog-header">
-                    <span class="modal-blog-category">${post.category}</span>
-                    <h2 class="modal-blog-title">${post.title}</h2>
-                </div>
-                <img src="${post.image}" alt="${post.title}" class="modal-blog-img">
-                <div class="modal-blog-body">
-                    ${post.content}
-                </div>
-            `;
-
-            const modal = document.getElementById('blog-modal');
-            modal.style.display = 'flex';
-            // Allow display change to take effect before adding class for transition
-            setTimeout(() => {
-                modal.classList.add('open');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            }, 10);
-        }
-
-        function closeBlogModal(event) {
-            const modal = document.getElementById('blog-modal');
-            modal.classList.remove('open');
-            document.body.style.overflow = ''; // Restore scrolling
-            
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-        }
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeBlogModal();
-            }
-        });
-    </script>
-
 </body>
-
 
 </html>
