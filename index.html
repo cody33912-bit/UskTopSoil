@@ -2080,7 +2080,7 @@
                     ever.</p>
                 <div class="quote-grid">
                     <div class="quote-form-wrap">
-                        <form class="quote-form" id="quote-form">
+                        <form class="quote-form" id="quote-form" action="https://formsubmit.co/b2industrial@yahoo.co.uk" method="POST">
                             <input type="hidden" name="_subject" value="New Usk Top Soil Quote Request">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
@@ -2458,63 +2458,8 @@
     <!-- Quote Form Email Submission -->
     <script>
         document.getElementById('quote-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            var form = this;
             var btn = document.getElementById('quote-submit-btn');
-            var origHTML = btn.innerHTML;
             btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true" style="animation:spin 1s linear infinite">progress_activity</span> Sending...';
-            btn.disabled = true;
-
-            // Convert form data to JSON object
-            var formData = new FormData(form);
-            var jsonData = {};
-            formData.forEach(function (value, key) {
-                if (key.charAt(0) !== '_' || key === '_subject' || key === '_template' || key === '_captcha') {
-                    jsonData[key] = value;
-                }
-            });
-
-            fetch('https://formsubmit.co/ajax/b2industrial@yahoo.co.uk', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(jsonData)
-            })
-                .then(function (response) {
-                    console.log('FormSubmit response status:', response.status);
-                    if (response.ok) {
-                        return response.json();
-                    }
-                    throw new Error('HTTP ' + response.status);
-                })
-                .then(function (data) {
-                    console.log('FormSubmit response data:', data);
-                    // FormSubmit returns { success: "true" } as a string
-                    if (data.success === 'true' || data.success === true) {
-                        btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">check_circle</span> Quote Sent!';
-                        btn.style.background = '#22c55e';
-                        form.reset();
-                        setTimeout(function () {
-                            btn.innerHTML = origHTML;
-                            btn.style.background = '';
-                            btn.disabled = false;
-                        }, 4000);
-                    } else {
-                        throw new Error(data.message || 'Unexpected response: ' + JSON.stringify(data));
-                    }
-                })
-                .catch(function (err) {
-                    console.error('FormSubmit error:', err);
-                    btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">error</span> Error — try again';
-                    btn.style.background = '#ef4444';
-                    setTimeout(function () {
-                        btn.innerHTML = origHTML;
-                        btn.style.background = '';
-                        btn.disabled = false;
-                    }, 4000);
-                });
         });
     </script>
 
