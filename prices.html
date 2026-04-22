@@ -610,7 +610,7 @@
 
             if (db) {
                 try {
-                    await addDoc(collection(db, "quotes"), {
+                    const fbPromise = addDoc(collection(db, "quotes"), {
                         name: formData.get('Full Name') || '',
                         email: formData.get('Email') || '',
                         phone: formData.get('Phone') || '',
@@ -620,6 +620,11 @@
                         description: formData.get('Delivery Details') || '',
                         timestamp: new Date().toISOString()
                     });
+                    
+                    await Promise.race([
+                        fbPromise,
+                        new Promise(resolve => setTimeout(resolve, 800))
+                    ]);
                 } catch (error) {
                     console.error("Dashboard log failed:", error);
                 }

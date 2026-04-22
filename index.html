@@ -2520,7 +2520,7 @@
             // 1. Save to Firebase (Dashboard)
             if (db) {
                 try {
-                    await addDoc(collection(db, "quotes"), {
+                    const fbPromise = addDoc(collection(db, "quotes"), {
                         name: formData.get('Full Name') || '',
                         email: formData.get('Email') || '',
                         phone: formData.get('Phone') || '',
@@ -2530,6 +2530,12 @@
                         description: formData.get('Delivery Details') || '',
                         timestamp: new Date().toISOString()
                     });
+                    
+                    // Wait a maximum of 800ms for Firebase so the user isn't kept waiting
+                    await Promise.race([
+                        fbPromise,
+                        new Promise(resolve => setTimeout(resolve, 800))
+                    ]);
                     console.log("Quote logged to dashboard");
                 } catch (error) {
                     console.error("Dashboard log failed:", error);
