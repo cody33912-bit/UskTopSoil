@@ -294,45 +294,6 @@
             max-width: 300px;
         }
 
-        /* Firebase Setup Banner */
-        .setup-banner {
-            background: linear-gradient(135deg, rgba(238, 189, 43, 0.1), rgba(238, 189, 43, 0.05));
-            border: 1px solid var(--primary);
-            border-radius: var(--radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-        }
-
-        .setup-banner .material-symbols-outlined {
-            color: var(--primary);
-            font-size: 2rem;
-        }
-
-        .setup-banner-content h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-        .setup-banner-content p {
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .setup-banner-content code {
-            display: block;
-            background: var(--bg-base);
-            padding: 1rem;
-            border-radius: 8px;
-            font-family: monospace;
-            color: #fff;
-            border: 1px solid var(--border);
-            overflow-x: auto;
-        }
-        
         .empty-state {
             text-align: center;
             padding: 4rem;
@@ -344,41 +305,37 @@
             margin-bottom: 1rem;
         }
 
+        .error-banner {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            color: #f87171;
+            font-weight: 600;
+        }
+
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo-area">
-            <img src="uskTopSoil.png" alt="Usk Top Soil Logo">
-            <h1>Quote Dashboard</h1>
+            <h1>📊 Quote Dashboard</h1>
         </div>
         <div class="nav-links">
-            <a href="/"><span class="material-symbols-outlined">arrow_back</span> Back to Website</a>
+            <a href="https://usktopsoil.co.uk"><span class="material-symbols-outlined">arrow_back</span> Back to Website</a>
         </div>
     </nav>
 
     <div class="container">
-        <!-- Setup Instructions (Will hide automatically when configured) -->
-        <div id="setup-banner" class="setup-banner">
-            <span class="material-symbols-outlined">database</span>
-            <div class="setup-banner-content">
-                <h3>Firebase Configuration Required</h3>
-                <p>To enable real-time automatic updates, you need to create a free Firebase project and add your config details at the bottom of <code>dashboard.html</code> and inside the scripts on <code>index.html</code> / <code>prices.html</code>.</p>
-                <ol style="margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
-                    <li>Go to <a href="https://console.firebase.google.com/" target="_blank" style="color:var(--primary)">Firebase Console</a> and create a project.</li>
-                    <li>Create a Web App and copy the config object.</li>
-                    <li>Go to Build -> Firestore Database -> Create Database (Start in test mode or set read/write rules).</li>
-                    <li>Replace the placeholder <code>firebaseConfig</code> in the code with your real config.</li>
-                </ol>
-            </div>
-        </div>
+        <div id="error-banner" class="error-banner" style="display:none;"></div>
 
         <div class="page-header">
             <h2>Incoming Quotes</h2>
             <div id="connection-status" class="status-badge offline">
                 <span class="status-indicator"></span>
-                <span>Awaiting Configuration</span>
+                <span>Connecting...</span>
             </div>
         </div>
 
@@ -460,15 +417,24 @@
         </div>
     </div>
 
-    <!-- Firebase SDK (Modular) -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-        import { getFirestore, collection, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+    <!-- Firebase SDK (compat - loads synchronously) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
 
-        // ==========================================
-        // 🔥 REPLACE THIS WITH YOUR FIREBASE CONFIG
-        // ==========================================
-        const firebaseConfig = {
+    <script>
+        var allQuotes = [];
+
+        var tableBody = document.getElementById('table-body');
+        var connectionStatus = document.getElementById('connection-status');
+        var errorBanner = document.getElementById('error-banner');
+
+        // Filter elements
+        var filterSearch = document.getElementById('filter-search');
+        var filterMaterial = document.getElementById('filter-material');
+        var filterUse = document.getElementById('filter-use');
+
+        // Firebase Configuration
+        var firebaseConfig = {
             apiKey: "AIzaSyBsQkG_kuDSW8tCXyLALiEYSm4riB1yX8c",
             authDomain: "usk-top-soil-dashboard.firebaseapp.com",
             projectId: "usk-top-soil-dashboard",
@@ -477,70 +443,43 @@
             appId: "1:554168686688:web:82ee6415cc8aa4cdc98b05",
             measurementId: "G-C6055MHQW2"
         };
-        // ==========================================
 
-        let allQuotes = [];
+        try {
+            firebase.initializeApp(firebaseConfig);
+            var db = firebase.firestore();
 
-        const tableBody = document.getElementById('table-body');
-        const setupBanner = document.getElementById('setup-banner');
-        const connectionStatus = document.getElementById('connection-status');
-        
-        // Filter elements
-        const filterSearch = document.getElementById('filter-search');
-        const filterMaterial = document.getElementById('filter-material');
-        const filterUse = document.getElementById('filter-use');
-
-        // Check if config is updated
-        if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
-            setupBanner.style.display = 'none';
             connectionStatus.classList.remove('offline');
             connectionStatus.innerHTML = '<span class="status-indicator"></span><span>Live Updates Active</span>';
-            
-            try {
-                const app = initializeApp(firebaseConfig);
-                const db = getFirestore(app);
-                
-                const q = query(collection(db, "quotes"), orderBy("timestamp", "desc"));
-                
-                onSnapshot(q, (snapshot) => {
-                    allQuotes = [];
-                    snapshot.forEach((doc) => {
-                        allQuotes.push({ id: doc.id, ...doc.data() });
-                    });
-                    updateDashboard();
-                }, (error) => {
-                    console.error("Firestore Error:", error);
-                    showError("Database connection failed. Check console.");
+
+            // Listen for all quotes (no orderBy to avoid needing a Firestore index)
+            db.collection("quotes").onSnapshot(function(snapshot) {
+                allQuotes = [];
+                snapshot.forEach(function(doc) {
+                    allQuotes.push({ id: doc.id, data: doc.data() });
                 });
-            } catch (err) {
-                console.error(err);
-                showError("Firebase initialization failed.");
-            }
-        } else {
-            // Mock Data for demonstration before Firebase setup
-            allQuotes = [
-                {
-                    timestamp: new Date().toISOString(),
-                    name: "John Doe",
-                    email: "john.doe@example.com",
-                    phone: "07700 900123",
-                    material: "Top Soil",
-                    quantity: "5–10 tonnes",
-                    use: "New Lawn / Turfing",
-                    description: "Need delivery to rear of property via wide side gate."
-                },
-                {
-                    timestamp: new Date(Date.now() - 86400000).toISOString(),
-                    name: "Jane Smith",
-                    email: "jane.smith@business.co.uk",
-                    phone: "07800 800456",
-                    material: "Top Soil",
-                    quantity: "20+ tonnes",
-                    use: "Commercial Project",
-                    description: "New housing estate landscaping phase 1."
-                }
-            ];
-            updateDashboard();
+
+                // Sort client-side by timestamp descending
+                allQuotes.sort(function(a, b) {
+                    var tA = a.data.timestamp || '';
+                    var tB = b.data.timestamp || '';
+                    return tB.localeCompare(tA);
+                });
+
+                // Flatten for easier use
+                allQuotes = allQuotes.map(function(item) {
+                    return Object.assign({ id: item.id }, item.data);
+                });
+
+                updateDashboard();
+                console.log("Dashboard updated: " + allQuotes.length + " quotes loaded");
+            }, function(error) {
+                console.error("Firestore Error:", error);
+                showError("Database error: " + error.message + ". Please check your Firestore rules in Firebase Console.");
+            });
+
+        } catch (err) {
+            console.error("Firebase init error:", err);
+            showError("Firebase failed to initialize: " + err.message);
         }
 
         function updateDashboard() {
@@ -550,11 +489,11 @@
 
         function renderStats() {
             document.getElementById('stat-total').textContent = allQuotes.length;
-            document.getElementById('stat-topsoil').textContent = allQuotes.filter(q => q.material === 'Top Soil').length;
-            document.getElementById('stat-commercial').textContent = allQuotes.filter(q => q.use === 'Commercial Project').length;
+            document.getElementById('stat-topsoil').textContent = allQuotes.filter(function(q) { return q.material === 'Top Soil'; }).length;
+            document.getElementById('stat-commercial').textContent = allQuotes.filter(function(q) { return q.use === 'Commercial Project'; }).length;
             
             if (allQuotes.length > 0) {
-                const date = new Date(allQuotes[0].timestamp);
+                var date = new Date(allQuotes[0].timestamp);
                 document.getElementById('stat-latest').textContent = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             } else {
                 document.getElementById('stat-latest').textContent = '-';
@@ -562,51 +501,52 @@
         }
 
         function renderTable() {
-            const searchTerm = filterSearch.value.toLowerCase();
-            const materialTerm = filterMaterial.value;
-            const useTerm = filterUse.value;
+            var searchTerm = filterSearch.value.toLowerCase();
+            var materialTerm = filterMaterial.value;
+            var useTerm = filterUse.value;
 
-            const filtered = allQuotes.filter(q => {
-                const matchSearch = (q.name && q.name.toLowerCase().includes(searchTerm)) || 
-                                    (q.email && q.email.toLowerCase().includes(searchTerm));
-                const matchMaterial = materialTerm === 'all' || q.material === materialTerm;
-                const matchUse = useTerm === 'all' || q.use === useTerm;
+            var filtered = allQuotes.filter(function(q) {
+                var matchSearch = (q.name && q.name.toLowerCase().indexOf(searchTerm) !== -1) || 
+                                    (q.email && q.email.toLowerCase().indexOf(searchTerm) !== -1);
+                var matchMaterial = materialTerm === 'all' || q.material === materialTerm;
+                var matchUse = useTerm === 'all' || q.use === useTerm;
                 return matchSearch && matchMaterial && matchUse;
             });
 
             tableBody.innerHTML = '';
 
             if (filtered.length === 0) {
-                tableBody.innerHTML = `<tr><td colspan="6"><div class="empty-state"><span class="material-symbols-outlined">inbox</span><p>No quotes found.</p></div></td></tr>`;
+                tableBody.innerHTML = '<tr><td colspan="6"><div class="empty-state"><span class="material-symbols-outlined">inbox</span><p>No quotes found.</p></div></td></tr>';
                 return;
             }
 
-            filtered.forEach(q => {
-                const dateObj = new Date(q.timestamp);
-                const formattedDate = dateObj.toLocaleDateString('en-GB') + '<br>' + dateObj.toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'});
+            filtered.forEach(function(q) {
+                var dateObj = new Date(q.timestamp);
+                var formattedDate = dateObj.toLocaleDateString('en-GB') + '<br>' + dateObj.toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'});
 
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td class="td-date">${formattedDate}</td>
-                    <td class="td-name">${q.name || 'N/A'}</td>
-                    <td class="td-contact">
-                        <a href="mailto:${q.email}">${q.email || 'N/A'}</a>
-                        <a href="tel:${q.phone}">${q.phone || 'N/A'}</a>
-                    </td>
-                    <td>
-                        <span class="chip">${q.material || 'N/A'}</span><br>
-                        <span style="font-size:0.8rem; color: var(--text-muted); margin-top:4px; display:inline-block;">Qty: ${q.quantity || 'N/A'}</span>
-                    </td>
-                    <td>${q.use || 'N/A'}</td>
-                    <td class="td-desc">${q.description || 'N/A'}</td>
-                `;
+                var tr = document.createElement('tr');
+                tr.innerHTML = 
+                    '<td class="td-date">' + formattedDate + '</td>' +
+                    '<td class="td-name">' + (q.name || 'N/A') + '</td>' +
+                    '<td class="td-contact">' +
+                        '<a href="mailto:' + (q.email || '') + '">' + (q.email || 'N/A') + '</a>' +
+                        '<a href="tel:' + (q.phone || '') + '">' + (q.phone || 'N/A') + '</a>' +
+                    '</td>' +
+                    '<td>' +
+                        '<span class="chip">' + (q.material || 'N/A') + '</span><br>' +
+                        '<span style="font-size:0.8rem; color: var(--text-muted); margin-top:4px; display:inline-block;">Qty: ' + (q.quantity || 'N/A') + '</span>' +
+                    '</td>' +
+                    '<td>' + (q.use || 'N/A') + '</td>' +
+                    '<td class="td-desc">' + (q.description || 'N/A') + '</td>';
                 tableBody.appendChild(tr);
             });
         }
 
         function showError(msg) {
             connectionStatus.className = 'status-badge offline';
-            connectionStatus.innerHTML = `<span class="status-indicator"></span><span>${msg}</span>`;
+            connectionStatus.innerHTML = '<span class="status-indicator"></span><span>Error</span>';
+            errorBanner.style.display = 'block';
+            errorBanner.textContent = msg;
         }
 
         // Listeners for filters
