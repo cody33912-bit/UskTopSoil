@@ -351,17 +351,27 @@
             .footer-grid {
                 grid-template-columns: 1fr;
             }
-            .nav-links { display: none; }
+
+            .nav-links {
+                display: none;
+            }
         }
 
-        .footer-logo-img { height: 3rem; margin-bottom: 1.5rem; }
+        .footer-logo-img {
+            height: 3rem;
+            margin-bottom: 1.5rem;
+        }
 
         /* ===== SPINNER ===== */
         @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+            from {
+                transform: rotate(0deg);
+            }
 
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -381,13 +391,16 @@
                     <a href="/#reviews">Reviews</a>
                     <a href="/#blog">Blog</a>
                     <a href="/#areas">Areas</a>
+                    <a href="/dashboard" style="color:var(--primary);font-weight:700;">📊 Quote Dashboard</a>
                 </div>
                 <div class="nav-right">
                     <a class="nav-phone" href="tel:+447743474400">
                         <span class="material-symbols-outlined">call</span>
                         07743 474400
                     </a>
-                    <button class="nav-cta" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+                    <button class="nav-cta"
+                        onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a
+                        Quote</button>
                 </div>
             </div>
         </nav>
@@ -399,7 +412,8 @@
             <div class="section-inner">
                 <p class="section-label" style="color:var(--primary)">Transparent Rates</p>
                 <h1>Our Prices</h1>
-                <p>Simple, honest pricing for high-grade screened topsoil and aggregates. Delivering bulk loads across Usk and Monmouthshire.</p>
+                <p>Simple, honest pricing for high-grade screened topsoil and aggregates. Delivering bulk loads across
+                    Usk and Monmouthshire.</p>
             </div>
         </section>
 
@@ -410,26 +424,41 @@
                     <div class="detail-card">
                         <span class="material-symbols-outlined">landscape</span>
                         <h4>Premium Top Soil</h4>
-                        <p style="font-size:2rem; font-weight:800; color:var(--primary); margin:0.5rem 0;">£50<span style="font-size:1rem; color:#64748b"> / tonne</span></p>
+                        <p style="font-size:2rem; font-weight:800; color:var(--primary); margin:0.5rem 0;">£50<span
+                                style="font-size:1rem; color:#64748b"> / tonne</span></p>
                         <p>Expertly screened, light and friable. Perfect for raised beds, borders, and new lawns.</p>
-                        <button class="nav-cta" style="width:100%; margin-top:1rem; padding:0.8rem 1.5rem;" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+                        <button class="nav-cta" style="width:100%; margin-top:1rem; padding:0.8rem 1.5rem;"
+                            onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a
+                            Quote</button>
                     </div>
                     <div class="detail-card">
                         <span class="material-symbols-outlined">local_shipping</span>
                         <h4>Delivery Rate</h4>
-                        <p style="font-size:2rem; font-weight:800; color:var(--primary); margin:0.5rem 0;">£25<span style="font-size:1rem; color:#64748b"> flat rate</span></p>
+                        <p style="font-size:2rem; font-weight:800; color:var(--primary); margin:0.5rem 0;">£25<span
+                                style="font-size:1rem; color:#64748b"> flat rate</span></p>
                         <p>Standard delivery rate for Usk and all surrounding areas.</p>
-                        <button class="nav-cta" style="width:100%; margin-top:1rem; padding:0.8rem 1.5rem;" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+                        <button class="nav-cta" style="width:100%; margin-top:1rem; padding:0.8rem 1.5rem;"
+                            onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a
+                            Quote</button>
                     </div>
                 </div>
 
-                <div style="margin-top: 4rem; background: white; padding: 2.5rem; border-radius: 1rem; border: 1px solid rgba(0,0,0,0.05);">
+                <div
+                    style="margin-top: 4rem; background: white; padding: 2.5rem; border-radius: 1rem; border: 1px solid rgba(0,0,0,0.05);">
                     <h3 style="margin-bottom: 1.5rem;">Why our prices are different</h3>
-                    <p style="margin-bottom: 1rem;">We don't hide our rates behind "call for price" games. As a local, family-run business, we believe in fair play. Our soil is sourced locally, screened by our team, and delivered by our own drivers.</p>
+                    <p style="margin-bottom: 1rem;">We don't hide our rates behind "call for price" games. As a local,
+                        family-run business, we believe in fair play. Our soil is sourced locally, screened by our team,
+                        and delivered by our own drivers.</p>
                     <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined" style="color:var(--primary)">check_circle</span> No Hidden Surcharges</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined" style="color:var(--primary)">check_circle</span> Bulk Discounts Available</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined" style="color:var(--primary)">check_circle</span> Trade Rates for Landscapers</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                class="material-symbols-outlined" style="color:var(--primary)">check_circle</span> No
+                            Hidden Surcharges</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                class="material-symbols-outlined" style="color:var(--primary)">check_circle</span> Bulk
+                            Discounts Available</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                class="material-symbols-outlined" style="color:var(--primary)">check_circle</span> Trade
+                            Rates for Landscapers</li>
                     </ul>
                 </div>
             </div>
@@ -442,7 +471,8 @@
                     <div>
                         <p class="section-label" style="color:var(--primary);">Fast & Free</p>
                         <h2 class="section-heading" style="color:white;">Get a Delivery Quote</h2>
-                        <p style="color:#94a3b8; margin-bottom: 3rem;">Tell us what you need and we'll confirm the price and delivery slot within the hour.</p>
+                        <p style="color:#94a3b8; margin-bottom: 3rem;">Tell us what you need and we'll confirm the price
+                            and delivery slot within the hour.</p>
 
                         <form class="quote-form" id="quote-form" action="https://formsubmit.co/b2industrial@yahoo.com" method="POST">
                             <input type="hidden" name="_subject" value="New Usk Top Soil Quote Request">
@@ -450,6 +480,7 @@
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_autoresponse" value="Hi, thanks for reaching out to Usk Top Soil! We've received your quote request and will be in touch to confirm your price and delivery slot within the hour. If you need anything urgently, give us a call on 07743 474400. Kind regards, Usk Top Soil">
                             <input type="hidden" name="_replyto" value="b2industrial@yahoo.com">
+                            <input type="hidden" name="_cc" value="codecanvasmainwales@gmail.com">
                             <input type="text" name="_honey" style="display:none">
                             <div>
                                 <label for="q-name">Full Name</label>
@@ -508,10 +539,14 @@
                         </form>
                     </div>
 
-                    <div style="background: rgba(238, 189, 43, 0.08); padding: 2rem; border-radius: 1rem; align-self: start;">
+                    <div
+                        style="background: rgba(238, 189, 43, 0.08); padding: 2rem; border-radius: 1rem; align-self: start;">
                         <h3 style="color:white; margin-bottom: 1rem;">Need Help Fast?</h3>
-                        <p style="color: #94a3b8; margin-bottom: 1.5rem;">For urgent same-day deliveries or large trade enquiries, call us directly.</p>
-                        <a href="tel:+447743474400" style="color:var(--primary); font-size: 1.5rem; font-weight: 800; display: block;">07743 474400</a>
+                        <p style="color: #94a3b8; margin-bottom: 1.5rem;">For urgent same-day deliveries or large trade
+                            enquiries, call us directly.</p>
+                        <a href="tel:+447743474400"
+                            style="color:var(--primary); font-size: 1.5rem; font-weight: 800; display: block;">07743
+                            474400</a>
                     </div>
                 </div>
             </div>
@@ -540,13 +575,61 @@
         </div>
     </footer>
 
-    <!-- Form Logic -->
-    <script>
-        document.getElementById('quote-form').addEventListener('submit', function (e) {
+    <!-- Form Logic & Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBsQkG_kuDSW8tCXyLALiEYSm4riB1yX8c",
+            authDomain: "usk-top-soil-dashboard.firebaseapp.com",
+            projectId: "usk-top-soil-dashboard",
+            storageBucket: "usk-top-soil-dashboard.firebasestorage.app",
+            messagingSenderId: "554168686688",
+            appId: "1:554168686688:web:82ee6415cc8aa4cdc98b05",
+            measurementId: "G-C6055MHQW2"
+        };
+
+        let db;
+        try {
+            if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+            }
+        } catch (e) {
+            console.error("Firebase initialization error:", e);
+        }
+
+        document.getElementById('quote-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
             var btn = document.getElementById('quote-submit-btn');
             btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true" style="animation:spin 1s linear infinite">progress_activity</span> Sending...';
-        });
+            btn.disabled = true;
 
+            const form = e.target;
+            const formData = new FormData(form);
+
+            if (db) {
+                try {
+                    await addDoc(collection(db, "quotes"), {
+                        name: formData.get('Full Name') || '',
+                        email: formData.get('Email') || '',
+                        phone: formData.get('Phone') || '',
+                        material: formData.get('Material Required') || '',
+                        quantity: formData.get('Quantity') || '',
+                        use: formData.get('Intended Use') || '',
+                        description: formData.get('Delivery Details') || '',
+                        timestamp: new Date().toISOString()
+                    });
+                } catch (error) {
+                    console.error("Dashboard log failed:", error);
+                }
+            }
+
+            HTMLFormElement.prototype.submit.call(form);
+        });
+    </script>
+    <script>
         // Smooth Scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
             anchor.addEventListener('click', function (e) {
@@ -563,4 +646,5 @@
 
 
 </body>
+
 </html>

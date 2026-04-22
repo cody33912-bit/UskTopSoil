@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Dashboard | Usk Top Soil</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #eebd2b;
+            --primary-hover: #d1a41f;
+            --bg-base: #110e08;
+            --bg-surface: #221d10;
+            --bg-surface-elevated: #312b1a;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(238, 189, 43, 0.15);
+            --font: 'Manrope', sans-serif;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Nav */
+        nav {
+            background: rgba(34, 29, 16, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-area img {
+            height: 40px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(34, 197, 94, 0.1);
+            color: #4ade80;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .status-badge.offline {
+            background: rgba(239, 68, 68, 0.1);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: currentColor;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .stat-card-icon {
+            color: var(--primary);
+        }
+
+        .stat-card-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Filters */
+        .filters-section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .filter-input {
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-family: var(--font);
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .filter-input:focus {
+            border-color: var(--primary);
+        }
+
+        /* Table */
+        .table-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: var(--bg-surface-elevated);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .td-date {
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .td-name {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .td-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .td-contact a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+        .td-contact a:hover {
+            color: var(--primary);
+        }
+
+        .chip {
+            display: inline-block;
+            background: rgba(238, 189, 43, 0.1);
+            border: 1px solid rgba(238, 189, 43, 0.2);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .td-desc {
+            color: var(--text-muted);
+            max-width: 300px;
+        }
+
+        /* Firebase Setup Banner */
+        .setup-banner {
+            background: linear-gradient(135deg, rgba(238, 189, 43, 0.1), rgba(238, 189, 43, 0.05));
+            border: 1px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .setup-banner .material-symbols-outlined {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .setup-banner-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .setup-banner-content p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .setup-banner-content code {
+            display: block;
+            background: var(--bg-base);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            color: #fff;
+            border: 1px solid var(--border);
+            overflow-x: auto;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-muted);
+        }
+        .empty-state .material-symbols-outlined {
+            font-size: 3rem;
+            opacity: 0.5;
+            margin-bottom: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="uskTopSoil.png" alt="Usk Top Soil Logo">
+            <h1>Quote Dashboard</h1>
+        </div>
+        <div class="nav-links">
+            <a href="/"><span class="material-symbols-outlined">arrow_back</span> Back to Website</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Setup Instructions (Will hide automatically when configured) -->
+        <div id="setup-banner" class="setup-banner">
+            <span class="material-symbols-outlined">database</span>
+            <div class="setup-banner-content">
+                <h3>Firebase Configuration Required</h3>
+                <p>To enable real-time automatic updates, you need to create a free Firebase project and add your config details at the bottom of <code>dashboard.html</code> and inside the scripts on <code>index.html</code> / <code>prices.html</code>.</p>
+                <ol style="margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
+                    <li>Go to <a href="https://console.firebase.google.com/" target="_blank" style="color:var(--primary)">Firebase Console</a> and create a project.</li>
+                    <li>Create a Web App and copy the config object.</li>
+                    <li>Go to Build -> Firestore Database -> Create Database (Start in test mode or set read/write rules).</li>
+                    <li>Replace the placeholder <code>firebaseConfig</code> in the code with your real config.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="page-header">
+            <h2>Incoming Quotes</h2>
+            <div id="connection-status" class="status-badge offline">
+                <span class="status-indicator"></span>
+                <span>Awaiting Configuration</span>
+            </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span>Total Quotes</span>
+                    <span class="material-symbols-outlined stat-card-icon">stacked_inbox</span>
+                </div>
+                <div class="stat-card-value" id="stat-total">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span>Top Soil Requests</span>
+                    <span class="material-symbols-outlined stat-card-icon">landscape</span>
+                </div>
+                <div class="stat-card-value" id="stat-topsoil">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span>Commercial Projects</span>
+                    <span class="material-symbols-outlined stat-card-icon">domain</span>
+                </div>
+                <div class="stat-card-value" id="stat-commercial">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <span>Latest Quote</span>
+                    <span class="material-symbols-outlined stat-card-icon">schedule</span>
+                </div>
+                <div class="stat-card-value" id="stat-latest" style="font-size:1.5rem; margin-top: auto;">-</div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-section">
+            <div class="filter-group">
+                <label for="filter-search">Search Name / Email</label>
+                <input type="text" id="filter-search" class="filter-input" placeholder="Search...">
+            </div>
+            <div class="filter-group">
+                <label for="filter-material">Material</label>
+                <select id="filter-material" class="filter-input">
+                    <option value="all">All Materials</option>
+                    <option value="Top Soil">Top Soil</option>
+                    <option value="Not Sure">Not Sure</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-use">Intended Use</label>
+                <select id="filter-use" class="filter-input">
+                    <option value="all">All Uses</option>
+                    <option value="New Lawn / Turfing">New Lawn / Turfing</option>
+                    <option value="Raised Beds & Planters">Raised Beds</option>
+                    <option value="Commercial Project">Commercial</option>
+                    <option value="Trade & Bulk Supply">Trade</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Data Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date Received</th>
+                        <th>Customer</th>
+                        <th>Contact</th>
+                        <th>Material & Qty</th>
+                        <th>Intended Use</th>
+                        <th>Project Description</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (Modular) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getFirestore, collection, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+        // ==========================================
+        // 🔥 REPLACE THIS WITH YOUR FIREBASE CONFIG
+        // ==========================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyBsQkG_kuDSW8tCXyLALiEYSm4riB1yX8c",
+            authDomain: "usk-top-soil-dashboard.firebaseapp.com",
+            projectId: "usk-top-soil-dashboard",
+            storageBucket: "usk-top-soil-dashboard.firebasestorage.app",
+            messagingSenderId: "554168686688",
+            appId: "1:554168686688:web:82ee6415cc8aa4cdc98b05",
+            measurementId: "G-C6055MHQW2"
+        };
+        // ==========================================
+
+        let allQuotes = [];
+
+        const tableBody = document.getElementById('table-body');
+        const setupBanner = document.getElementById('setup-banner');
+        const connectionStatus = document.getElementById('connection-status');
+        
+        // Filter elements
+        const filterSearch = document.getElementById('filter-search');
+        const filterMaterial = document.getElementById('filter-material');
+        const filterUse = document.getElementById('filter-use');
+
+        // Check if config is updated
+        if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
+            setupBanner.style.display = 'none';
+            connectionStatus.classList.remove('offline');
+            connectionStatus.innerHTML = '<span class="status-indicator"></span><span>Live Updates Active</span>';
+            
+            try {
+                const app = initializeApp(firebaseConfig);
+                const db = getFirestore(app);
+                
+                const q = query(collection(db, "quotes"), orderBy("timestamp", "desc"));
+                
+                onSnapshot(q, (snapshot) => {
+                    allQuotes = [];
+                    snapshot.forEach((doc) => {
+                        allQuotes.push({ id: doc.id, ...doc.data() });
+                    });
+                    updateDashboard();
+                }, (error) => {
+                    console.error("Firestore Error:", error);
+                    showError("Database connection failed. Check console.");
+                });
+            } catch (err) {
+                console.error(err);
+                showError("Firebase initialization failed.");
+            }
+        } else {
+            // Mock Data for demonstration before Firebase setup
+            allQuotes = [
+                {
+                    timestamp: new Date().toISOString(),
+                    name: "John Doe",
+                    email: "john.doe@example.com",
+                    phone: "07700 900123",
+                    material: "Top Soil",
+                    quantity: "5–10 tonnes",
+                    use: "New Lawn / Turfing",
+                    description: "Need delivery to rear of property via wide side gate."
+                },
+                {
+                    timestamp: new Date(Date.now() - 86400000).toISOString(),
+                    name: "Jane Smith",
+                    email: "jane.smith@business.co.uk",
+                    phone: "07800 800456",
+                    material: "Top Soil",
+                    quantity: "20+ tonnes",
+                    use: "Commercial Project",
+                    description: "New housing estate landscaping phase 1."
+                }
+            ];
+            updateDashboard();
+        }
+
+        function updateDashboard() {
+            renderStats();
+            renderTable();
+        }
+
+        function renderStats() {
+            document.getElementById('stat-total').textContent = allQuotes.length;
+            document.getElementById('stat-topsoil').textContent = allQuotes.filter(q => q.material === 'Top Soil').length;
+            document.getElementById('stat-commercial').textContent = allQuotes.filter(q => q.use === 'Commercial Project').length;
+            
+            if (allQuotes.length > 0) {
+                const date = new Date(allQuotes[0].timestamp);
+                document.getElementById('stat-latest').textContent = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            } else {
+                document.getElementById('stat-latest').textContent = '-';
+            }
+        }
+
+        function renderTable() {
+            const searchTerm = filterSearch.value.toLowerCase();
+            const materialTerm = filterMaterial.value;
+            const useTerm = filterUse.value;
+
+            const filtered = allQuotes.filter(q => {
+                const matchSearch = (q.name && q.name.toLowerCase().includes(searchTerm)) || 
+                                    (q.email && q.email.toLowerCase().includes(searchTerm));
+                const matchMaterial = materialTerm === 'all' || q.material === materialTerm;
+                const matchUse = useTerm === 'all' || q.use === useTerm;
+                return matchSearch && matchMaterial && matchUse;
+            });
+
+            tableBody.innerHTML = '';
+
+            if (filtered.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="6"><div class="empty-state"><span class="material-symbols-outlined">inbox</span><p>No quotes found.</p></div></td></tr>`;
+                return;
+            }
+
+            filtered.forEach(q => {
+                const dateObj = new Date(q.timestamp);
+                const formattedDate = dateObj.toLocaleDateString('en-GB') + '<br>' + dateObj.toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'});
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="td-date">${formattedDate}</td>
+                    <td class="td-name">${q.name || 'N/A'}</td>
+                    <td class="td-contact">
+                        <a href="mailto:${q.email}">${q.email || 'N/A'}</a>
+                        <a href="tel:${q.phone}">${q.phone || 'N/A'}</a>
+                    </td>
+                    <td>
+                        <span class="chip">${q.material || 'N/A'}</span><br>
+                        <span style="font-size:0.8rem; color: var(--text-muted); margin-top:4px; display:inline-block;">Qty: ${q.quantity || 'N/A'}</span>
+                    </td>
+                    <td>${q.use || 'N/A'}</td>
+                    <td class="td-desc">${q.description || 'N/A'}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        function showError(msg) {
+            connectionStatus.className = 'status-badge offline';
+            connectionStatus.innerHTML = `<span class="status-indicator"></span><span>${msg}</span>`;
+        }
+
+        // Listeners for filters
+        filterSearch.addEventListener('input', renderTable);
+        filterMaterial.addEventListener('change', renderTable);
+        filterUse.addEventListener('change', renderTable);
+
+    </script>
+</body>
+</html>
