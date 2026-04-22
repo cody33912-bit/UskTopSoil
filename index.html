@@ -2479,15 +2479,14 @@
         });
     </script>
 
-    <!-- Quote Form Email Submission & Firebase -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+    <!-- Firebase SDK (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
 
-        // ==========================================
-        // 🔥 REPLACE THIS WITH YOUR FIREBASE CONFIG
-        // ==========================================
-        const firebaseConfig = {
+    <!-- Quote Form Email Submission & Firebase -->
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
             apiKey: "AIzaSyBsQkG_kuDSW8tCXyLALiEYSm4riB1yX8c",
             authDomain: "usk-top-soil-dashboard.firebaseapp.com",
             projectId: "usk-top-soil-dashboard",
@@ -2497,53 +2496,43 @@
             measurementId: "G-C6055MHQW2"
         };
 
-        let db;
-        try {
-            if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
-                const app = initializeApp(firebaseConfig);
-                db = getFirestore(app);
-            }
-        } catch (e) {
-            console.error("Firebase initialization error:", e);
-        }
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
 
-        document.getElementById('quote-form').addEventListener('submit', async function (e) {
-            e.preventDefault(); // Pause standard form submission
+        document.getElementById('quote-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
             var btn = document.getElementById('quote-submit-btn');
             btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true" style="animation:spin 1s linear infinite">progress_activity</span> Sending...';
             btn.disabled = true;
 
-            const form = e.target;
-            const formData = new FormData(form);
+            var form = e.target;
+            var formData = new FormData(form);
 
-            // 1. Save to Firebase (Dashboard)
-            if (db) {
-                try {
-                    const fbPromise = addDoc(collection(db, "quotes"), {
-                        name: formData.get('Full Name') || '',
-                        email: formData.get('Email') || '',
-                        phone: formData.get('Phone') || '',
-                        material: formData.get('Material Required') || '',
-                        quantity: formData.get('Quantity') || '',
-                        use: formData.get('Intended Use') || '',
-                        description: formData.get('Delivery Details') || '',
-                        timestamp: new Date().toISOString()
-                    });
-                    
-                    // Wait a maximum of 800ms for Firebase so the user isn't kept waiting
-                    await Promise.race([
-                        fbPromise,
-                        new Promise(resolve => setTimeout(resolve, 800))
-                    ]);
+            // Fire-and-forget: save to Firebase in background (don't wait for it)
+            try {
+                db.collection("quotes").add({
+                    name: formData.get('Full Name') || '',
+                    email: formData.get('Email') || '',
+                    phone: formData.get('Phone') || '',
+                    material: formData.get('Material Required') || '',
+                    quantity: formData.get('Quantity') || '',
+                    use: formData.get('Intended Use') || '',
+                    description: formData.get('Delivery Details') || '',
+                    timestamp: new Date().toISOString()
+                }).then(function() {
                     console.log("Quote logged to dashboard");
-                } catch (error) {
-                    console.error("Dashboard log failed:", error);
-                }
+                }).catch(function(err) {
+                    console.error("Dashboard log failed:", err);
+                });
+            } catch (error) {
+                console.error("Firebase error:", error);
             }
 
-            // 2. Resume FormSubmit standard HTML POST
-            HTMLFormElement.prototype.submit.call(form);
+            // Submit the form to FormSubmit immediately (don't wait for Firebase)
+            setTimeout(function() {
+                HTMLFormElement.prototype.submit.call(form);
+            }, 300);
         });
     </script>
 
