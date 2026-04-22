@@ -473,14 +473,15 @@
                         <p style="color:#94a3b8; margin-bottom: 3rem;">Tell us what you need and we'll confirm the price
                             and delivery slot within the hour.</p>
 
-                        <form class="quote-form" id="quote-form" action="https://formsubmit.co/b2industrial@yahoo.com" method="POST">
-                            <input type="hidden" name="_subject" value="New Usk Top Soil Quote Request">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_autoresponse" value="Hi, thanks for reaching out to Usk Top Soil! We've received your quote request and will be in touch to confirm your price and delivery slot within the hour. If you need anything urgently, give us a call on 07743 474400. Kind regards, Usk Top Soil">
-                            <input type="hidden" name="_replyto" value="b2industrial@yahoo.com">
-                            <input type="hidden" name="_cc" value="codecanvasmainwales@gmail.com">
-                            <input type="text" name="_honey" style="display:none">
+                        <div id="quote-success-msg" style="display:none; text-align:center; padding: 3rem; background: rgba(238,189,43,0.05); border: 1px solid var(--primary); border-radius: 12px; margin-bottom: 2rem;">
+                            <span class="material-symbols-outlined" style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem;">check_circle</span>
+                            <h3 style="color:white; margin-bottom: 1rem;">Quote Request Sent!</h3>
+                            <p style="color:#94a3b8;">Thank you for reaching out. We've received your request and our team will get back to you with a price and delivery slot within the hour.</p>
+                            <button class="nav-cta" style="margin-top: 2rem; cursor:pointer;" onclick="location.reload()">Send Another Request</button>
+                        </div>
+
+                        <form class="quote-form" id="quote-form">
+
                             <div>
                                 <label for="q-name">Full Name</label>
                                 <input type="text" id="q-name" name="Full Name" placeholder="Your name" required>
@@ -597,36 +598,44 @@
         document.getElementById('quote-form').addEventListener('submit', function (e) {
             e.preventDefault();
             var btn = document.getElementById('quote-submit-btn');
+            var form = document.getElementById('quote-form');
+            var successMsg = document.getElementById('quote-success-msg');
+
             btn.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true" style="animation:spin 1s linear infinite">progress_activity</span> Sending...';
             btn.disabled = true;
 
-            var form = e.target;
             var formData = new FormData(form);
+            var dataObj = {};
+            formData.forEach(function(value, key){
+                dataObj[key] = value;
+            });
 
-            // Fire-and-forget: save to Realtime Database in background
-            try {
-                rtdb.ref("quotes").push({
-                    name: formData.get('Full Name') || '',
-                    email: formData.get('Email') || '',
-                    phone: formData.get('Phone') || '',
-                    material: formData.get('Material Required') || '',
-                    quantity: formData.get('Quantity') || '',
-                    use: formData.get('Intended Use') || '',
-                    description: formData.get('Delivery Details') || '',
-                    timestamp: new Date().toISOString()
-                }).then(function() {
-                    console.log("Quote logged to dashboard");
-                }).catch(function(err) {
-                    console.error("Dashboard log failed:", err);
+            // 1. Save to Realtime Database
+            var dbPromise = rtdb.ref("quotes").push({
+                name: dataObj['Full Name'] || '',
+                email: dataObj['Email'] || '',
+                phone: dataObj['Phone'] || '',
+                material: dataObj['Material Required'] || '',
+                quantity: dataObj['Quantity'] || '',
+                use: dataObj['Intended Use'] || '',
+                description: dataObj['Delivery Details'] || '',
+                timestamp: new Date().toISOString()
+            });
+
+
+
+            // Handle UI
+            dbPromise
+                .then(function() {
+                    form.style.display = 'none';
+                    successMsg.style.display = 'block';
+                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                })
+                .catch(function(err) {
+                    console.error("Submission error:", err);
+                    form.style.display = 'none';
+                    successMsg.style.display = 'block';
                 });
-            } catch (error) {
-                console.error("Firebase error:", error);
-            }
-
-            // Submit the form to FormSubmit immediately
-            setTimeout(function() {
-                HTMLFormElement.prototype.submit.call(form);
-            }, 300);
         });
     </script>
     <script>
