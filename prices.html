@@ -576,13 +576,14 @@
 
     <!-- Firebase SDK (compat) -->
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
 
     <!-- Form Logic & Firebase -->
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyBsQkG_kuDSW8tCXyLALiEYSm4riB1yX8c",
             authDomain: "usk-top-soil-dashboard.firebaseapp.com",
+            databaseURL: "https://usk-top-soil-dashboard-default-rtdb.europe-west1.firebasedatabase.app",
             projectId: "usk-top-soil-dashboard",
             storageBucket: "usk-top-soil-dashboard.firebasestorage.app",
             messagingSenderId: "554168686688",
@@ -591,7 +592,7 @@
         };
 
         firebase.initializeApp(firebaseConfig);
-        var db = firebase.firestore();
+        var rtdb = firebase.database();
 
         document.getElementById('quote-form').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -602,9 +603,9 @@
             var form = e.target;
             var formData = new FormData(form);
 
-            // Fire-and-forget: save to Firebase in background
+            // Fire-and-forget: save to Realtime Database in background
             try {
-                db.collection("quotes").add({
+                rtdb.ref("quotes").push({
                     name: formData.get('Full Name') || '',
                     email: formData.get('Email') || '',
                     phone: formData.get('Phone') || '',

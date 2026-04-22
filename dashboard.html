@@ -419,7 +419,7 @@
 
     <!-- Firebase SDK (compat - loads synchronously) -->
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
 
     <script>
         var allQuotes = [];
@@ -437,6 +437,7 @@
         var firebaseConfig = {
             apiKey: "AIzaSyBsQkG_kuDSW8tCXyLALiEYSm4riB1yX8c",
             authDomain: "usk-top-soil-dashboard.firebaseapp.com",
+            databaseURL: "https://usk-top-soil-dashboard-default-rtdb.europe-west1.firebasedatabase.app",
             projectId: "usk-top-soil-dashboard",
             storageBucket: "usk-top-soil-dashboard.firebasestorage.app",
             messagingSenderId: "554168686688",
@@ -446,35 +447,31 @@
 
         try {
             firebase.initializeApp(firebaseConfig);
-            var db = firebase.firestore();
+            var rtdb = firebase.database();
 
             connectionStatus.classList.remove('offline');
             connectionStatus.innerHTML = '<span class="status-indicator"></span><span>Live Updates Active</span>';
 
-            // Listen for all quotes (no orderBy to avoid needing a Firestore index)
-            db.collection("quotes").onSnapshot(function(snapshot) {
+            // Listen for all quotes from Realtime Database
+            rtdb.ref("quotes").on("value", function(snapshot) {
                 allQuotes = [];
-                snapshot.forEach(function(doc) {
-                    allQuotes.push({ id: doc.id, data: doc.data() });
+                snapshot.forEach(function(childSnapshot) {
+                    var data = childSnapshot.val();
+                    allQuotes.push(Object.assign({ id: childSnapshot.key }, data));
                 });
 
                 // Sort client-side by timestamp descending
                 allQuotes.sort(function(a, b) {
-                    var tA = a.data.timestamp || '';
-                    var tB = b.data.timestamp || '';
+                    var tA = a.timestamp || '';
+                    var tB = b.timestamp || '';
                     return tB.localeCompare(tA);
-                });
-
-                // Flatten for easier use
-                allQuotes = allQuotes.map(function(item) {
-                    return Object.assign({ id: item.id }, item.data);
                 });
 
                 updateDashboard();
                 console.log("Dashboard updated: " + allQuotes.length + " quotes loaded");
             }, function(error) {
-                console.error("Firestore Error:", error);
-                showError("Database error: " + error.message + ". Please check your Firestore rules in Firebase Console.");
+                console.error("Database Error:", error);
+                showError("Database error: " + error.message + ". Please check your Security Rules in Firebase Console.");
             });
 
         } catch (err) {
