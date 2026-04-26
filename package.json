@@ -1,0 +1,27 @@
+{
+  "name": "usk-top-soil",
+  "version": "1.0.0",
+  "description": "Usk Top Soil - Premium Soil Supply & Bulk Deliveries",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild speed-insights-init.js --bundle --outfile=speed-insights.bundle.js --format=esm --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cody33912-bit/UskTopSoil.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cody33912-bit/UskTopSoil/issues"
+  },
+  "homepage": "https://github.com/cody33912-bit/UskTopSoil#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
