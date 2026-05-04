@@ -532,8 +532,34 @@
         }
         
         @media (max-width: 768px) {
+            .gallery-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                margin-left: -1.5rem;
+                margin-right: -1.5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                padding-bottom: 1rem;
+                gap: 1rem;
+            }
+            .gallery-grid::-webkit-scrollbar {
+                display: none;
+            }
+            .gallery-item {
+                flex: 0 0 85%;
+                scroll-snap-align: center;
+                height: 350px;
+            }
+            .gallery-item.tall {
+                grid-row: auto;
+                height: 350px;
+            }
             .gallery-item.wide {
-                grid-column: span 1;
+                grid-column: auto;
+                flex: 0 0 85%;
             }
         }
 
